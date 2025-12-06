@@ -6495,12 +6495,44 @@ class CatalogManager {
     this.priceRange = { min: 39, max: 1230 };
     this.selectedCategory = null;
     this.selectedSize = null;
+    this.mediaQueryListeners = [];
     this.init();
   }
   init() {
+    this.setupResponsiveItemsPerPage();
     this.setupEventListeners();
     this.renderProducts();
     this.updateFilterCounts();
+  }
+  // НОВИЙ КОД: Метод для розрахунку itemsPerPage на основі ширини viewport
+  setupResponsiveItemsPerPage() {
+    const breakpoints2 = [
+      { query: "(max-width: 479.98px)", itemsPerPage: 8 },
+      // 2 ряди × 4 елементи
+      { query: "(min-width: 480px) and (max-width: 719.98px)", itemsPerPage: 9 },
+      // 3 ряди × 3 елементи
+      { query: "(min-width: 720px) and (max-width: 949.98px)", itemsPerPage: 12 },
+      // 3 ряди × 3 елементи
+      { query: "(min-width: 950px)", itemsPerPage: 9 }
+      // 3 ряди × 4 елементи
+    ];
+    this.mediaQueryListeners.forEach((listener) => listener.removeAllListeners?.());
+    this.mediaQueryListeners = [];
+    breakpoints2.forEach((breakpoint) => {
+      const mediaQuery = window.matchMedia(breakpoint.query);
+      const listener = (e) => {
+        if (e.matches) {
+          this.itemsPerPage = breakpoint.itemsPerPage;
+          this.currentPage = 1;
+          this.renderProducts();
+        }
+      };
+      mediaQuery.addEventListener("change", listener);
+      if (mediaQuery.matches) {
+        this.itemsPerPage = breakpoint.itemsPerPage;
+      }
+      this.mediaQueryListeners.push({ mediaQuery, listener });
+    });
   }
   setupEventListeners() {
     document.querySelectorAll("[data-filter]").forEach((btn) => {
