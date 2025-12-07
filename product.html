@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/cerapro-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/cerapro-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/cerapro-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/cerapro-black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>product</title>
+		<link rel="modulepreload" crossorigin href="./js/common.min.js?v=1765141002702">
+		<script type="module" crossorigin="" src="./js/main.min.js?v=1765141002702"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1765141002702">
+		<link rel="stylesheet" crossorigin="" href="./css/product.min.css?v=1765141002702">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-watcher="" data-fls-watcher-once="" data-fls-header-scroll="" class="header">
+				<div class="header__container">
+					<button type="button" class="header__logo">
+						<img src="./assets/img/logo.svg" alt="logo">
+					</button>
+					<div class="header__menu menu">
+						<!-- <button type="button" data-fls-menu class="menu__icon icon-menu"><span></span></button> -->
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Home</span>
+											<span class="link__hover">Home</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Shop</span>
+											<span class="link__hover">Shop</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Plant Care</span>
+											<span class="link__hover">Plant Care</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Blogs</span>
+											<span class="link__hover">Blogs</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+					<div class="header__actions">
+						<!--
+<div class="header__search">
+/*
+<button type="button" class="header__search-icon --icon-search" aria-label="Search" title="Search"></button>
+*/
+<button type="button" class="header__search-icon" aria-label="Search" title="Search">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"/>
+</svg>
+</button>
+<input type="text" class="header__search-input input--header" aria-label="Search for plants" placeholder="Find your plants" data-fls-input>
+</div>
+-->
+						<div class="header__search">
+							<input type="text" class="header__search-input input--header" aria-label="Search for plants" placeholder="Find your plants" data-fls-input="">
+							<button type="button" class="header__search-icon" aria-label="Search" title="Search">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+								</svg>
+							</button>
+						</div>
+						<a href="#" class="header__shop">
+							<!-- <img src="@img/icons/shop.svg" alt="shop"> -->
+							<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"></path>
+							</svg>
+							<span>6</span>
+						</a>
+						<button data-fls-button="" data-fls-popup-link="login" class="header__button button button--icon">
+							<img src="./assets/img/icons/login.svg" alt="login">
+							Login
+						</button>
+						<button type="button" aria-label="Plant Search Filter" class="header__filters">
+							<svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.2154 16.3926H4.28223" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9385 16.3934C13.9385 18.2651 14.5626 18.8884 16.4335 18.8884C18.3043 18.8884 18.9284 18.2651 18.9284 16.3934C18.9284 14.5218 18.3043 13.8984 16.4335 13.8984C14.5626 13.8984 13.9385 14.5218 13.9385 16.3934Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M12.9951 6.77801H18.9274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.27202 6.77677C9.27202 4.90595 8.64786 4.2818 6.77704 4.2818C4.9054 4.2818 4.28125 4.90595 4.28125 6.77677C4.28125 8.64841 4.9054 9.27175 6.77704 9.27175C8.64786 9.27175 9.27202 8.64841 9.27202 6.77677Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</header>
+			<nav class="header-bottom" role="navigation">
+				<div class="header-bottom__action action-left-header-bottom">
+					<ul class="header-bottom__list">
+						<li class="header-bottom__item header-bottom__item--active">
+							<a href="#" class="header-bottom__link" aria-label="Home">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.61233 17.3111V14.763C7.61233 14.1126 8.14349 13.5853 8.79871 13.5853H11.1939C11.5085 13.5853 11.8103 13.7094 12.0328 13.9302C12.2552 14.1511 12.3802 14.4507 12.3802 14.763V17.3111C12.3782 17.5816 12.4851 17.8416 12.677 18.0335C12.8689 18.2254 13.1301 18.3334 13.4025 18.3333H15.0365C15.7997 18.3353 16.5323 18.0357 17.0727 17.5007C17.613 16.9657 17.9167 16.2392 17.9167 15.4815V8.2224C17.9167 7.6104 17.6434 7.02989 17.1705 6.63724L11.6117 2.22991C10.6447 1.45716 9.25927 1.48211 8.32117 2.28917L2.88919 6.63724C2.39396 7.01831 2.09797 7.60055 2.08334 8.2224V15.4741C2.08334 17.0532 3.37283 18.3333 4.96349 18.3333H6.56025C7.12603 18.3334 7.58584 17.8802 7.58994 17.3185L7.61233 17.3111Z" fill="#46A358"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="header-bottom__item">
+							<a href="#" class="header-bottom__link" aria-label="Wishlist">
+								<svg width="20" height="18" viewbox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.4134 1.74133C17.3781 0.618439 15.9575 0 14.413 0C13.2585 0 12.2012 0.36499 11.2704 1.08475C10.8008 1.44806 10.3752 1.89255 10 2.41135C9.62494 1.8927 9.19922 1.44806 8.7294 1.08475C7.79877 0.36499 6.74149 0 5.58701 0C4.04251 0 2.62177 0.618439 1.58646 1.74133C0.563507 2.8511 0 4.36722 0 6.01059C0 7.70203 0.630341 9.25034 1.98364 10.8833C3.19427 12.3441 4.93423 13.8269 6.94916 15.544C7.63718 16.1304 8.41705 16.795 9.22684 17.5031C9.44077 17.6904 9.71527 17.7936 10 17.7936C10.2846 17.7936 10.5592 17.6904 10.7729 17.5034C11.5826 16.7952 12.363 16.1302 13.0513 15.5435C15.0659 13.8268 16.8059 12.3441 18.0165 10.8832C19.3698 9.25034 20 7.70203 20 6.01044C20 4.36722 19.4365 2.8511 18.4134 1.74133Z" fill="#D9D9D9"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-bottom__togle-nav togle-nav-header-bottom">
+					<button type="button" class="togle-nav-header-bottom__button" aria-label="Show navigation">
+						<svg width="27" height="25" viewbox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.3819 12.8916C9.28498 12.8916 5.18803 12.8916 1.09108 12.8908C0.961448 12.8908 0.827342 12.8945 0.702176 12.867C0.25441 12.7686 -0.0480741 12.3373 0.00631347 11.8932C0.060701 11.4484 0.439924 11.1117 0.913021 11.1094C1.98364 11.1035 3.055 11.1065 4.12561 11.1065C11.3234 11.1065 18.5212 11.1072 25.719 11.1087C25.8575 11.1087 26.0013 11.105 26.1347 11.1363C26.5743 11.2398 26.8641 11.6555 26.8179 12.0921C26.7702 12.5392 26.3947 12.8871 25.9246 12.8893C24.7139 12.8968 23.504 12.8931 22.2933 12.8931C19.3228 12.8931 16.3524 12.8931 13.3827 12.8931C13.3819 12.8931 13.3819 12.8923 13.3819 12.8916Z" fill="white"></path>
+							<path d="M10.5553 24C9.20451 23.7973 7.81949 23.7213 6.51121 23.3652C3.76501 22.6164 2.19523 20.7241 1.74448 17.9272C1.57759 16.8923 1.47478 15.8471 1.35557 14.8055C1.2833 14.1759 1.58355 13.7632 2.1319 13.6954C2.67652 13.6283 3.07586 13.9815 3.1362 14.5276C3.26584 15.7077 3.35599 16.8976 3.57876 18.0613C3.98107 20.163 5.7021 21.6285 7.83663 21.8163C8.84615 21.9049 9.85418 22.0174 10.8607 22.1337C11.5953 22.2186 11.9343 23.0344 11.4948 23.6312C11.3048 23.8897 11.0805 23.9635 10.5553 24Z" fill="white"></path>
+							<path d="M25.4463 9.39807C25.4307 9.53515 25.4322 9.67745 25.3949 9.80858C25.3077 10.1185 25.0015 10.3778 24.7423 10.383C24.3004 10.3919 23.7998 10.0641 23.6977 9.64989C23.6247 9.3556 23.6225 9.04418 23.5822 8.74095C23.4571 7.78432 23.3967 6.81354 23.1881 5.87554C22.7605 3.95559 21.5326 2.73746 19.6142 2.32247C18.4743 2.07587 17.2971 1.99987 16.1364 1.84714C16.0075 1.83 15.8756 1.82404 15.7504 1.79201C15.331 1.68547 15.0583 1.28687 15.1112 0.870399C15.17 0.407732 15.5269 0.0538406 15.9732 0.0858771C17.5042 0.195397 19.0427 0.306407 20.5119 0.776524C22.8633 1.52975 24.3452 3.15766 24.9054 5.53953C25.2012 6.79864 25.3018 8.1032 25.4903 9.38689C25.4761 9.39136 25.4612 9.39434 25.4463 9.39807Z" fill="white"></path>
+							<path d="M25.315 15.1839C25.1914 16.4706 25.1012 17.8839 24.7093 19.2473C23.9703 21.8177 21.7888 23.5923 19.1298 23.8524C18.048 23.9582 16.9706 24.1139 15.8918 24.2472C15.5096 24.2949 15.0939 23.9261 15.0134 23.4679C14.933 23.009 15.2213 22.5582 15.6758 22.4971C16.2189 22.4234 16.7702 22.4092 17.3134 22.3362C18.2149 22.2163 19.1491 22.1835 20.0059 21.9115C21.8625 21.323 22.8996 19.967 23.1716 18.0485C23.3161 17.0286 23.4234 16.0034 23.5262 14.9783C23.5858 14.3852 23.9725 13.9717 24.4933 14.0015C24.9969 14.0306 25.3441 14.4776 25.315 15.1839Z" fill="white"></path>
+							<path d="M1.3295 9.27513C1.52768 7.95493 1.62081 6.60791 1.9449 5.319C2.60053 2.71063 4.34912 1.11849 6.95898 0.532893C8.1339 0.269151 9.34756 0.177512 10.5448 0.0173291C10.7266 -0.00725703 10.9226 -0.0087471 11.0984 0.0329748C11.5119 0.130574 11.7548 0.509797 11.7153 0.940427C11.6736 1.39117 11.3681 1.69068 10.9285 1.73985C9.84748 1.86055 8.7642 1.97081 7.68688 2.1228C5.4108 2.44316 3.83356 4.02338 3.52363 6.28456C3.37536 7.36933 3.2569 8.45857 3.1295 9.54632C3.07809 9.98441 2.70185 10.3122 2.24217 10.3063C1.79589 10.3003 1.41518 9.94492 1.39059 9.50833C1.38612 9.43457 1.38985 9.36007 1.38985 9.28556C1.36973 9.28184 1.34961 9.27886 1.3295 9.27513Z" fill="white"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="header-bottom__action action-right-header-bottom">
+					<ul class="header-bottom__list">
+						<li class="header-bottom__item">
+							<a href="#" class="header-bottom__link" aria-label="Shop">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.3334 6.80137L17.3897 12.7778C17.2182 13.9563 16.2745 14.7138 15.0736 14.7138H6.83828C5.72308 14.7138 4.69367 13.8721 4.5221 12.7778L3.49269 5.79127L3.23533 3.85524C3.14955 3.35019 2.72063 3.01349 2.12014 3.01349H1.51965C1.17651 3.01349 0.833374 2.67679 0.833374 2.34009C0.833374 2.00339 1.17651 1.66669 1.51965 1.66669H2.12014C3.32112 1.66669 4.35053 2.50844 4.43632 3.68689L4.60788 5.03369H16.7893C17.2182 5.03369 17.6471 5.20204 17.9045 5.53874C18.2476 5.87544 18.3334 6.38049 18.3334 6.80137Z" fill="#D9D9D9"></path>
+									<path d="M15.2451 18.3334C15.7189 18.3334 16.103 17.9565 16.103 17.4916C16.103 17.0267 15.7189 16.6499 15.2451 16.6499C14.7714 16.6499 14.3873 17.0267 14.3873 17.4916C14.3873 17.9565 14.7714 18.3334 15.2451 18.3334Z" fill="#D9D9D9"></path>
+									<path d="M6.66671 18.3334C7.14048 18.3334 7.52455 17.9565 7.52455 17.4916C7.52455 17.0267 7.14048 16.6499 6.66671 16.6499C6.19293 16.6499 5.80886 17.0267 5.80886 17.4916C5.80886 17.9565 6.19293 18.3334 6.66671 18.3334Z" fill="#D9D9D9"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="header-bottom__item">
+							<a href="#" class="header-bottom__link" aria-label="Profile">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 9.82995C12.2658 9.82995 14.1026 8.00254 14.1026 5.74832C14.1026 3.4941 12.2658 1.66669 10 1.66669C7.73426 1.66669 5.89748 3.4941 5.89748 5.74832C5.89748 8.00254 7.73426 9.82995 10 9.82995Z" fill="#D9D9D9"></path>
+									<path d="M12.1368 11.5307H7.86329C5.38466 11.5307 3.33337 13.5715 3.33337 16.0375C3.33337 16.6328 3.58978 17.143 4.1026 17.3981C4.87184 17.8232 6.58124 18.3334 10 18.3334C13.4188 18.3334 15.1282 17.8232 15.8975 17.3981C16.3248 17.143 16.6667 16.6328 16.6667 16.0375C16.6667 13.4865 14.6154 11.5307 12.1368 11.5307Z" fill="#D9D9D9"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<main class="page page--product">
+				<section class="product">
+					<div class="product__container">
+						<nav class="product__breadcrumb breadcrumb" aria-label="Breadcrumb">
+							<ol class="breadcrumb__list">
+								<li class="breadcrumb__item">
+									<a href="index.html" class="breadcrumb__link">Home</a>
+								</li>
+								<li class="breadcrumb__item">
+									<span class="breadcrumb__current">Shop</span>
+								</li>
+							</ol>
+						</nav>
+						<div class="product__body">
+							<div class="product__slider product-sliders">
+								<div class="product-sliders__thumbs thumbs-product-sliders">
+									<div class="thumbs-product-sliders__swiper swiper">
+										<div class="thumbs-product-sliders__wrapper swiper-wrapper">
+											<div class="thumbs-product-sliders__slide swiper-slide">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/9.webp">
+												</picture>
+											</div>
+											<div class="thumbs-product-sliders__slide swiper-slide">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/2.webp">
+												</picture>
+											</div>
+											<div class="thumbs-product-sliders__slide swiper-slide">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/9.webp">
+												</picture>
+											</div>
+											<div class="thumbs-product-sliders__slide swiper-slide">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/2.webp">
+												</picture>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div data-fls-slider="" class="product-sliders__slider swiper">
+									<div class="product-sliders__wrapper swiper-wrapper">
+										<div class="product-sliders__slide swiper-slide">
+											<picture>
+												<img alt="Plant" src="./assets/img/plants/9.webp">
+											</picture>
+											<div class="product-sliders__search">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="product-sliders__slide swiper-slide">
+											<picture>
+												<img alt="Plant" src="./assets/img/plants/2.webp">
+											</picture>
+											<div class="product-sliders__search">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="product-sliders__slide swiper-slide">
+											<picture>
+												<img alt="Plant" src="./assets/img/plants/9.webp">
+											</picture>
+											<div class="product-sliders__search">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="product-sliders__slide swiper-slide">
+											<picture>
+												<img alt="Plant" src="./assets/img/plants/2.webp">
+											</picture>
+											<div class="product-sliders__search">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product__content content-product">
+								<div class="content-product__top">
+									<h2 class="content-product__title">Barberton Daisy</h2>
+									<div class="content-product__label">
+										<span class="content-product__price">$119.00</span>
+										<div class="content-product__rating">
+											<div class="content-product__stars">
+												<img src="./assets/img/icons/star-fill.svg" alt="rating">
+												<img src="./assets/img/icons/star-fill.svg" alt="rating">
+												<img src="./assets/img/icons/star-fill.svg" alt="rating">
+												<img src="./assets/img/icons/star-fill.svg" alt="rating">
+												<img src="./assets/img/icons/star.svg" alt="rating">
+											</div>
+											<div class="content-product__customer">
+												<span>19</span>
+												<p>Customer Review</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content-product__description description-content-product">
+									<h5 class="description-content-product__title">Short Description:</h5>
+									<div data-fls-text="" class="description-content-product__text text">
+										<p>
+											The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.
+										</p>
+									</div>
+								</div>
+								<div class="content-product__size size-content-product">
+									<h5 class="size-content-product__title">Size:</h5>
+									<div class="size-content-product__buttons">
+										<button type="button" class="size-content-product__button">S</button>
+										<button type="button" class="size-content-product__button">M</button>
+										<button type="button" class="size-content-product__button">L</button>
+										<button type="button" class="size-content-product__button">XL</button>
+									</div>
+								</div>
+								<div class="content-product__actions actions-content-product">
+									<div class="actions-content-product__count count-actions-content-product">
+										<button type="button" class="count-actions-content-product__button count-actions-content-product__button--minus"></button>
+										<div class="count-actions-content-product__quantity">1</div>
+										<button type="button" class="count-actions-content-product__button count-actions-content-product__button--plus"></button>
+									</div>
+									<div class="actions-content-product__buy">
+										<button type="button" data-fls-button="" class="actions-content-product__button button">Buy now</button>
+										<button type="button" data-fls-button="" class="actions-content-product__button button button--second">add to cart</button>
+										<button type="button" class="actions-content-product__button actions-content-product__button--favorite">
+											<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M10 18.8873C9.71527 18.8873 9.44077 18.7842 9.22684 18.5968C8.41888 17.8903 7.63992 17.2264 6.95267 16.6408L6.94916 16.6377C4.93423 14.9207 3.19427 13.4378 1.98364 11.9771C0.630341 10.3441 0 8.79578 0 7.10434C0 5.46097 0.563507 3.94485 1.58661 2.83508C2.62192 1.71219 4.04251 1.09375 5.58716 1.09375C6.74164 1.09375 7.79892 1.45874 8.72955 2.1785C9.19922 2.54181 9.62494 2.98645 10 3.5051C10.3752 2.98645 10.8008 2.54181 11.2706 2.1785C12.2012 1.45874 13.2585 1.09375 14.413 1.09375C15.9575 1.09375 17.3782 1.71219 18.4135 2.83508C19.4366 3.94485 20 5.46097 20 7.10434C20 8.79578 19.3698 10.3441 18.0165 11.9769C16.8059 13.4378 15.0661 14.9205 13.0515 16.6374C12.363 17.224 11.5828 17.8889 10.773 18.5971C10.5592 18.7842 10.2846 18.8873 10 18.8873ZM5.58716 2.26532C4.37363 2.26532 3.25882 2.74963 2.44781 3.62915C1.62476 4.52194 1.17142 5.75607 1.17142 7.10434C1.17142 8.52692 1.70013 9.79919 2.88559 11.2296C4.03137 12.6122 5.73563 14.0645 7.70889 15.7462L7.71255 15.7492C8.4024 16.3371 9.18442 17.0036 9.99832 17.7153C10.8171 17.0023 11.6003 16.3347 12.2916 15.7458C14.2647 14.0642 15.9688 12.6122 17.1146 11.2296C18.2999 9.79919 18.8286 8.52692 18.8286 7.10434C18.8286 5.75607 18.3752 4.52194 17.5522 3.62915C16.7413 2.74963 15.6264 2.26532 14.413 2.26532C13.524 2.26532 12.7078 2.54791 11.9872 3.10516C11.3449 3.60199 10.8975 4.23004 10.6352 4.66949C10.5003 4.89548 10.2629 5.03036 10 5.03036C9.73709 5.03036 9.49966 4.89548 9.36478 4.66949C9.10263 4.23004 8.65524 3.60199 8.01285 3.10516C7.29218 2.54791 6.47598 2.26532 5.58716 2.26532Z" fill="#46A358"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="content-product__info info-content-product">
+									<p class="info-content-product__sku text">
+										<strong>sku:</strong>
+										1995751877966
+									</p>
+									<p class="info-content-product__categories text">
+										<strong>Categories:</strong>
+										Potter Plants
+									</p>
+									<p class="info-content-product__tags text">
+										<strong>Tags:</strong>
+										Home, Garden, Plants
+									</p>
+								</div>
+								<div class="content-product__share share-content-product">
+									<h5 class="share-content-product__title">Share this products:</h5>
+									<div class="share-content-product__item">
+										<svg width="8" height="15" viewbox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.875 5H0V7.5H1.875V15H5V7.5H7.25L7.5 5H5V3.9375C5 3.375 5.125 3.125 5.6875 3.125H7.5V0H5.125C2.875 0 1.875 1 1.875 2.875V5Z" fill="#3D3D3D"></path>
+										</svg>
+									</div>
+									<div class="share-content-product__item">
+										<svg width="15" height="13" viewbox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M4.71737 12.1908C10.378 12.1908 13.4736 7.50111 13.4736 3.4346C13.4736 3.30135 13.4709 3.1688 13.4647 3.03675C14.0656 2.60239 14.588 2.06021 15 1.44331C14.4486 1.6883 13.8552 1.85327 13.2327 1.92765C13.868 1.54669 14.356 0.94378 14.5861 0.225197C13.9914 0.577835 13.3329 0.834082 12.632 0.972271C12.0702 0.374134 11.2704 0 10.3855 0C8.68578 0 7.30747 1.37831 7.30747 3.07718C7.30747 3.31876 7.3346 3.55351 7.38714 3.77887C4.82962 3.65041 2.56162 2.42565 1.04392 0.563675C0.779318 1.01833 0.626969 1.54686 0.626969 2.11037C0.626969 3.17801 1.17034 4.12059 1.99658 4.67216C1.49176 4.65663 1.01748 4.51776 0.602743 4.2871C0.602061 4.2999 0.602061 4.31286 0.602061 4.32634C0.602061 5.81691 1.66305 7.06129 3.07104 7.3433C2.81257 7.41376 2.54063 7.45163 2.25982 7.45163C2.06158 7.45163 1.86879 7.43184 1.6813 7.39619C2.07301 8.61873 3.20923 9.5086 4.55632 9.53368C3.50284 10.3592 2.17588 10.8511 0.734108 10.8511C0.48588 10.8511 0.240893 10.8369 0 10.8084C1.36193 11.6812 2.97908 12.1908 4.71737 12.1908Z" fill="#3D3D3D"></path>
+										</svg>
+									</div>
+									<div class="share-content-product__item">
+										<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.125 1.5625C3.125 2.4375 2.4375 3.125 1.5625 3.125C0.6875 3.125 0 2.4375 0 1.5625C0 0.6875 0.6875 0 1.5625 0C2.4375 0 3.125 0.6875 3.125 1.5625ZM3.125 4.375H0V14.375H3.125V4.375ZM8.125 4.375H5V14.375H8.125V9.125C8.125 6.1875 11.875 5.9375 11.875 9.125V14.375H15V8.0625C15 3.125 9.4375 3.3125 8.125 5.75V4.375Z" fill="#3D3D3D"></path>
+										</svg>
+									</div>
+									<div class="share-content-product__item">
+										<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M14.6208 7.51587C14.6208 7.51587 11.9457 10.7264 9.98918 10.7264C8.03346 10.7264 5.32836 7.51587 5.32836 7.51587" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.0434 9.97404C2.0434 4.27562 4.02752 2.37671 9.9799 2.37671C15.9323 2.37671 17.9164 4.27562 17.9164 9.97404C17.9164 15.6716 15.9323 17.5714 9.9799 17.5714C4.02752 17.5714 2.0434 15.6716 2.0434 9.97404Z" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__top top-footer">
+					<div class="top-footer__container">
+						<section class="footer__features features-footer">
+							<div class="features-footer__item">
+								<div class="features-footer__image">
+									<img src="./assets/img/footer/icons/1.svg" alt="Garden Care">
+								</div>
+								<div class="features-footer__body">
+									<h4 class="features-footer__title">
+										Garden Care
+										<h4>
+											<div data-fls-text="" class="features-footer__text text">
+												<p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+											</div>
+										</h4>
+									</h4>
+								</div>
+							</div>
+							<div class="features-footer__item">
+								<div class="features-footer__image">
+									<img src="./assets/img/footer/icons/2.svg" alt="Plant Renovation">
+								</div>
+								<div class="features-footer__body">
+									<h4 class="features-footer__title">
+										Plant Renovation
+										<h4>
+											<div data-fls-text="" class="features-footer__text text">
+												<p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+											</div>
+										</h4>
+									</h4>
+								</div>
+							</div>
+							<div class="features-footer__item">
+								<div class="features-footer__image">
+									<img src="./assets/img/footer/icons/3.svg" alt="Watering Graden">
+								</div>
+								<div class="features-footer__body">
+									<h4 class="features-footer__title">
+										Watering Graden
+										<h4>
+											<div data-fls-text="" class="features-footer__text text">
+												<p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+											</div>
+										</h4>
+									</h4>
+								</div>
+							</div>
+							<section class="features-footer__item newsletter-features-footer" aria-label="subscribe to news">
+								<h4 class="newsletter-features-footer__title">Would you like to join newsletters?</h4>
+								<form class="newsletter-features-footer__form" method="POST" action="/subscribe">
+									<input data-fls-input="" autocomplete="true" type="email" name="email" data-error="error" required placeholder="enter your email address..." aria-label="email address for subscription">
+									<button type="submit" class="newsletter-features-footer__button">Join</button>
+								</form>
+								<div class="newsletter-features-footer__text text">
+									<p>
+										We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!
+									</p>
+								</div>
+							</section>
+						</section>
+					</div>
+				</div>
+				<div class="footer__divider divider-footer">
+					<div class="divider-footer__container">
+						<div class="divider-footer__logo">
+							<img src="./assets/img/logo.svg" alt="logo">
+						</div>
+						<address class="divider-footer__item text">
+							<img src="./assets/img/icons/location.svg" alt="icon location">
+							<p>70 West Buckingham Ave. Farmingdale, NY 11735</p>
+						</address>
+						<address class="divider-footer__item text">
+							<img src="./assets/img/icons/message.svg" alt="icon message">
+							<a href="mailto:contact@greenshop.com">contact@greenshop.com</a>
+						</address>
+						<address class="divider-footer__item text">
+							<img src="./assets/img/icons/calling.svg" alt="icon calling">
+							<a href="tel:+18801917490">+88 0191 717 490</a>
+						</address>
+					</div>
+				</div>
+				<div class="footer__links links-footer">
+					<div class="links-footer__container">
+						<div class="links-footer__items items-links-footer">
+							<div class="items-links-footer__item">
+								<h4 class="items-links-footer__title">My Account</h4>
+								<ul class="items-links-footer__list list-items-links-footer">
+									<li class="list-links-footer__item text">
+										<a href="account.html">My Account</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Our stores</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Contact us</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Career</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Specials</a>
+									</li>
+								</ul>
+							</div>
+							<div class="items-links-footer__item">
+								<h4 class="items-links-footer__title">Help & Guide</h4>
+								<ul class="items-links-footer__list list-items-links-footer">
+									<li class="list-links-footer__item text">
+										<a href="#">Help Center</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">How to Buy</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Shipping & Delivery</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Product Policy</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">How to Return</a>
+									</li>
+								</ul>
+							</div>
+							<div class="items-links-footer__item">
+								<h4 class="items-links-footer__title">Categories</h4>
+								<ul class="items-links-footer__list list-items-links-footer">
+									<li class="list-links-footer__item text">
+										<a href="#">House Plants</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">How to Buy</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Shipping & Delivery</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">Product Policy</a>
+									</li>
+									<li class="list-links-footer__item text">
+										<a href="#">How to Return</a>
+									</li>
+								</ul>
+							</div>
+							<div class="items-links-footer__item items-links-footer__item--social">
+								<div class="items-links-footer__social social-items-links-footer">
+									<h4 class="social-items-links-footer__title">Social Media</h4>
+									<div class="social-items-links-footer__items">
+										<a href="#" class="social-items-links-footer__item">
+											<img src="./assets/img/icons/facebook.svg" alt="facebook">
+										</a>
+										<a href="#" class="social-items-links-footer__item">
+											<img src="./assets/img/icons/instagram.svg" alt="instagram">
+										</a>
+										<a href="#" class="social-items-links-footer__item">
+											<svg width="16" height="13" viewbox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.03186 13.0036C11.0699 13.0036 14.3718 8.00118 14.3718 3.66357C14.3718 3.52144 14.3689 3.38005 14.3624 3.2392C15.0033 2.77588 15.5605 2.19756 16 1.53953C15.4118 1.80085 14.7789 1.97682 14.1149 2.05616C14.7926 1.64981 15.313 1.0067 15.5585 0.24021C14.9241 0.616357 14.2217 0.889688 13.4742 1.03709C12.8749 0.399076 12.0218 0 11.0779 0C9.26483 0 7.79464 1.4702 7.79464 3.28233C7.79464 3.54001 7.82357 3.79041 7.87962 4.0308C5.1516 3.89377 2.73239 2.58735 1.11352 0.601253C0.831273 1.08622 0.668767 1.64999 0.668767 2.25106C0.668767 3.38988 1.24837 4.3953 2.12968 4.98363C1.59121 4.96707 1.08531 4.81894 0.642926 4.57291C0.642198 4.58656 0.642198 4.60039 0.642198 4.61476C0.642198 6.2047 1.77392 7.53204 3.27578 7.83285C3.00008 7.90801 2.71001 7.94841 2.41047 7.94841C2.19901 7.94841 1.99338 7.9273 1.79339 7.88927C2.21121 9.19332 3.42318 10.1425 4.86007 10.1693C3.73636 11.0499 2.32094 11.5745 0.783049 11.5745C0.518272 11.5745 0.256952 11.5594 0 11.529C1.45273 12.46 3.17769 13.0036 5.03186 13.0036Z" fill="#46A358" fill-opacity="0.6"></path>
+											</svg>
+										</a>
+										<a href="#" class="social-items-links-footer__item">
+											<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.33333 1.66667C3.33333 2.6 2.6 3.33333 1.66667 3.33333C0.733333 3.33333 0 2.6 0 1.66667C0 0.733333 0.733333 0 1.66667 0C2.6 0 3.33333 0.733333 3.33333 1.66667ZM3.33333 4.66667H0V15.3333H3.33333V4.66667ZM8.66667 4.66667H5.33333V15.3333H8.66667V9.73333C8.66667 6.6 12.6667 6.33333 12.6667 9.73333V15.3333H16V8.6C16 3.33333 10.0667 3.53333 8.66667 6.13333V4.66667Z" fill="#46A358" fill-opacity="0.6"></path>
+											</svg>
+										</a>
+										<a href="#" class="social-items-links-footer__item">
+											<img src="./assets/img/icons/youtube.svg" alt="youtube">
+										</a>
+									</div>
+								</div>
+								<div class="items-links-footer__payment payment-items-links-footer">
+									<h4 class="payment-items-links-footer__title">We accept</h4>
+									<picture>
+										<img alt="payment" src="./assets/img/footer/payment.webp">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div class="bottom-footer__container">
+						<p>&copy; 2021 GreenShop. All Rights Reserved.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
