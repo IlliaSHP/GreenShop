@@ -321,7 +321,7 @@ body::after {
   font-weight: 700;
 }
 .menu__link--active::after {
-  bottom: -1.4375rem;
+  bottom: -1.5625rem;
   opacity: 1;
 }
 /*
@@ -921,6 +921,9 @@ textarea.input {
   }
   .header .header__button {
     display: none;
+  }
+  .footer--prod {
+    margin-bottom: 6.5625rem;
   }
   .newsletter-features-footer .newsletter-features-footer__title {
     font-size: 1.0625rem;

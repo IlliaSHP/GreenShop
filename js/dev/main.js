@@ -5455,6 +5455,20 @@ function initSliders() {
     });
   }
   if (document.querySelector(".thumbs-product-sliders__swiper")) {
+    let updateThumbsState = function() {
+      const newIsMobileView = window.innerWidth < 479.98;
+      if (newIsMobileView === isMobileView) return;
+      isMobileView = newIsMobileView;
+      if (isMobileView) {
+        thumbsSwiper.disable();
+        thumbsContainer.style.display = "none";
+      } else {
+        thumbsSwiper.enable();
+        thumbsContainer.style.display = "flex";
+      }
+    };
+    const thumbsContainer = document.querySelector(".product-sliders__thumbs");
+    let isMobileView = window.innerWidth < 479.98;
     const thumbsSwiper = new Swiper(".thumbs-product-sliders__swiper", {
       // Подключаем модули слайдера
       // для конкретного случая
@@ -5489,6 +5503,10 @@ function initSliders() {
       },
       on: {
         init: function(swiper) {
+          if (isMobileView) {
+            swiper.disable();
+            document.querySelector(".product-sliders__thumbs").style.display = "none";
+          }
         }
       }
     });
@@ -5521,11 +5539,37 @@ function initSliders() {
       //loop: true,
       //preloadImages: false,
       //lazy: true,
+      pagination: {
+        el: ".product-sliders__pagination",
+        clickable: true
+        // dynamicBullets: true,
+      },
+      //* активується правильно, але під час resize
+      //* не оновлюється
+      // // Активуємо булети тільки на мобільних пристроях
+      // pagination: isMobileView ? {
+      //    el: '.product-sliders__pagination',
+      //    clickable: true,
+      //    dynamicBullets: true,
+      // } : false,
       on: {
         init: function(swiper) {
         }
       }
     });
+    if ("ResizeObserver" in window) {
+      const resizeObserver = new ResizeObserver(updateThumbsState);
+      resizeObserver.observe(document.documentElement);
+    } else {
+      let debounce = function(func, delay) {
+        let timeoutId;
+        return function() {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(func, delay);
+        };
+      };
+      window.addEventListener("resize", debounce(updateThumbsState, 250));
+    }
   }
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
@@ -5847,8 +5891,8 @@ if (toggleButton && headerBottom) {
     headerBottom.classList.toggle("header-bottom--show");
   });
 } else {
-  if (!toggleButton) console.warn("Елемент .togle-nav-header-bottom__button не знайдено");
-  if (!headerBottom) console.warn("Елемент .header-bottom не знайдено");
+  if (!toggleButton) console.log("Елемент .togle-nav-header-bottom__button не знайдено");
+  if (!headerBottom) console.log("Елемент .header-bottom не знайдено");
 }
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
