@@ -14,6 +14,15 @@ const isMobile = { Android: function() {
 function addTouchAttr() {
   if (isMobile.any()) document.documentElement.setAttribute("data-fls-touch", "");
 }
+function getHash() {
+  if (location.hash) {
+    return location.hash.replace("#", "");
+  }
+}
+function setHash(hash) {
+  hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+  history.pushState("", "", hash);
+}
 let slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains("--slide")) {
     target.classList.add("--slide");
@@ -129,13 +138,32 @@ let bodyLock = (delay = 500) => {
 function uniqArray(array) {
   return array.filter((item, index, self) => self.indexOf(item) === index);
 }
+function dataMediaQueries(array, dataSetValue) {
+  const media = Array.from(array).filter((item) => item.dataset[dataSetValue]).map((item) => {
+    const [value, type = "max"] = item.dataset[dataSetValue].split(",");
+    return { value, type, item };
+  });
+  if (media.length === 0) return [];
+  const breakpointsArray = media.map(({ value, type }) => `(${type}-width: ${value}px),${value},${type}`);
+  const uniqueQueries = [...new Set(breakpointsArray)];
+  return uniqueQueries.map((query) => {
+    const [mediaQuery, mediaBreakpoint, mediaType] = query.split(",");
+    const matchMedia = window.matchMedia(mediaQuery);
+    const itemsArray = media.filter((item) => item.value === mediaBreakpoint && item.type === mediaType);
+    return { itemsArray, matchMedia };
+  });
+}
 addTouchAttr();
 export {
-  slideToggle as a,
-  bodyLock as b,
-  bodyUnlock as c,
-  bodyLockStatus as d,
-  bodyLockToggle as e,
-  slideUp as s,
+  setHash as a,
+  slideUp as b,
+  slideToggle as c,
+  dataMediaQueries as d,
+  bodyLock as e,
+  bodyUnlock as f,
+  getHash as g,
+  bodyLockStatus as h,
+  bodyLockToggle as i,
+  slideDown as s,
   uniqArray as u
 };

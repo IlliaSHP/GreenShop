@@ -1,4 +1,4 @@
-import { b as bodyLock, c as bodyUnlock, d as bodyLockStatus, e as bodyLockToggle, u as uniqArray } from "./common.min.js";
+import { e as bodyLock, f as bodyUnlock, h as bodyLockStatus, i as bodyLockToggle, u as uniqArray } from "./common.min.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) return;
@@ -5570,6 +5570,59 @@ function initSliders() {
       };
       window.addEventListener("resize", debounce(updateThumbsState, 250));
     }
+  }
+  if (document.querySelector(".releted__slider")) {
+    new Swiper(".releted__slider", {
+      // <- Вказуємо склас потрібного слайдера
+      // Підключаємо модулі слайдера
+      // для конкретного випадку
+      modules: [Navigation, Pagination, Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1.4,
+      spaceBetween: 15,
+      speed: 800,
+      // loop: true,
+      // Ефекти
+      // autoplay: {
+      // 	delay: 7000,
+      // 	disableOnInteraction: false,
+      // },
+      // Пагінація
+      pagination: {
+        el: ".releted__pagination",
+        clickable: true
+      },
+      // Брейкпоінти
+      breakpoints: {
+        // 350: {
+        // 	slidesPerView: 1.4,
+        // },
+        370: {
+          slidesPerView: 1.6
+        },
+        420: {
+          slidesPerView: 1.7
+        },
+        500: {
+          slidesPerView: 2.2
+        },
+        564.98: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        767.98: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        991.98: {
+          slidesPerView: 5,
+          spaceBetween: 26
+        }
+      },
+      // Події
+      on: {}
+    });
   }
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
