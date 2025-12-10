@@ -683,6 +683,11 @@ body::after {
 .links-footer__items {
   row-gap: 1.875rem;
 }
+.links-footer__payment {
+  max-width: 14rem;
+  min-width: 10.625rem;
+}
+
 .items-links-footer .items-links-footer__item--social {
   display: flex;
   flex-wrap: wrap;
@@ -710,7 +715,6 @@ body::after {
 }
 .social-items-links-footer__items {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 0.625rem;
 }
@@ -1084,7 +1088,7 @@ textarea.input {
   .features-footer, .items-links-footer {
     column-gap: 1.25rem;
   }
-  .features-footer__item, .items-links-footer__item {
+  .features-footer__item:not(.items-links-footer__item--social, .newsletter-features-footer), .items-links-footer__item:not(.items-links-footer__item--social, .newsletter-features-footer) {
     flex-basis: 8.4375rem;
   }
 }@media (max-width: 35.25em) {

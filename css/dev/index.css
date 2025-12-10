@@ -820,6 +820,7 @@
   .blog__item {
     border-radius: 1.25rem;
     overflow: hidden;
+    align-self: flex-start;
   }
 }
 @media (width <= 37.5em) {
