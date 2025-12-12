@@ -1,5 +1,7 @@
 import "./main.min.js";
 import { g as getHash, d as dataMediaQueries, s as slideDown, a as setHash, b as slideUp } from "./common.min.js";
+import "./productcomp.min.js";
+import "./breadcrumb.min.js";
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
   let tabsActiveHash = [];
@@ -242,38 +244,4 @@ sizeButtons.forEach((button) => {
     sizeButtons.forEach((btn) => btn.classList.remove("size-content-product__button--active"));
     this.classList.add("size-content-product__button--active");
   });
-});
-const quantityInput = document.querySelector(".count-actions-content-product__quantity");
-const plusButtons = document.querySelectorAll(".count-actions-content-product__button--plus, .product-action-sticky__count-btn--plus");
-const minusButtons = document.querySelectorAll(".count-actions-content-product__button--minus, .product-action-sticky__count-btn--minus");
-function getQuantity() {
-  let quantity = parseInt(quantityInput.textContent.trim()) || 1;
-  return Math.max(1, quantity);
-}
-function setQuantity(value) {
-  value = Math.max(1, parseInt(value) || 1);
-  quantityInput.textContent = value;
-}
-plusButtons.forEach((button) => {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    const currentQuantity = getQuantity();
-    setQuantity(currentQuantity + 1);
-  });
-});
-minusButtons.forEach((button) => {
-  button.addEventListener("click", function(e) {
-    e.preventDefault();
-    const currentQuantity = getQuantity();
-    if (currentQuantity > 1) {
-      setQuantity(currentQuantity - 1);
-    }
-  });
-});
-quantityInput.addEventListener("blur", function() {
-  let value = parseInt(this.textContent.trim()) || 1;
-  this.textContent = Math.max(1, value);
-});
-quantityInput.addEventListener("input", function() {
-  this.textContent = this.textContent.replace(/[^0-9]/g, "");
 });
