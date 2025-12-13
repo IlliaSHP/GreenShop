@@ -1,6 +1,5 @@
 import "./main.min.js";
 import { b as slideUp, c as slideToggle } from "./common.min.js";
-import "./productcomp.min.js";
 let formValidate = {
   getErrors(form) {
     let error = 0;

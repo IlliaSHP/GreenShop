@@ -9,12 +9,12 @@
 		<link rel="preload" href="./assets/fonts/cerapro-black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>product-cart</title>
-		<link rel="modulepreload" crossorigin href="./js/common.min.js?v=1765576516039">
-		<script type="module" crossorigin="" src="./js/main.min.js?v=1765576516039"></script>
-		<script type="module" crossorigin="" src="./js/breadcrumb.min.js?v=1765576516039"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1765576516039">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1765576516039">
-		<link rel="stylesheet" crossorigin="" href="./css/product-cart.min.css?v=1765576516039">
+		<link rel="modulepreload" crossorigin href="./js/common.min.js?v=1765648999849">
+		<script type="module" crossorigin="" src="./js/main.min.js?v=1765648999849"></script>
+		<script type="module" crossorigin="" src="./js/breadcrumb.min.js?v=1765648999849"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1765648999849">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1765648999849">
+		<link rel="stylesheet" crossorigin="" href="./css/product-cart.min.css?v=1765648999849">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -137,146 +137,458 @@
 								<h4 class="titles-body-product-cart__title">Quantity</h4>
 								<h4 class="titles-body-product-cart__title">Total</h4>
 							</div>
+							<div class="body-product-cart__top top-body-product-cart">
+								<a href="product.html" class="top-body-product-cart__arrow">
+									<svg width="8" height="14" viewbox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.58301 12.4168C6.58301 12.4168 0.749674 8.96346 0.749674 6.58346C0.749674 4.20429 6.58301 0.750122 6.58301 0.750122" stroke="#3D3D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</a>
+								<h2 class="top-body-product-cart__title">Cart</h2>
+							</div>
 							<div class="body-product-cart__items">
 								<div class="body-product-cart__item item-body-product-cart">
-									<div class="item-body-product-cart__info-product">
-										<div class="item-body-product-cart__image">
-											<picture>
-												<img alt="plant" src="./assets/img/plants/2.webp">
-											</picture>
-										</div>
+									<div class="item-body-product-cart__image">
+										<picture>
+											<img alt="plant" src="./assets/img/plants/2.webp">
+										</picture>
+									</div>
+									<div class="item-body-product-cart__content">
 										<div data-fls-productinfo="" data-fls-text="" class="item-body-product-cart__info product-info">
-											<h5 class="product-info__title">
-												<a href="product.html">Barberton Daisy</a>
-											</h5>
+											<h5 class="product-info__title">Barberton Daisy</h5>
 											<p class="product-info__item text">
 												<strong>sku:</strong>
 												1995751877966
 											</p>
+											<p class="product-info__item text">
+												size:
+												<strong>M</strong>
+											</p>
+											<span data-countprice="" class="product-info__price">$119.00</span>
+											<span data-counttotal="" class="product-info__total">$238.00</span>
 										</div>
+										<span data-countprice="" class="item-body-product-cart__price">$119.00</span>
+										<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
+											<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
+											<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">2</div>
+											<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+										</div>
+										<span data-counttotal="" class="item-body-product-cart__total">$238.00</span>
+										<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
+											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
 									</div>
-									<span data-countprice="" class="item-body-product-cart__price">$119.00</span>
-									<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
-										<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
-										<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">2</div>
-										<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
-									</div>
-									<span data-counttotal="" class="item-body-product-cart__total">$238.00</span>
-									<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
-										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</button>
 								</div>
 								<div class="body-product-cart__item item-body-product-cart">
-									<div class="item-body-product-cart__info-product">
-										<div class="item-body-product-cart__image">
-											<picture>
-												<img alt="plant" src="./assets/img/plants/2.webp">
-											</picture>
-										</div>
+									<div class="item-body-product-cart__image">
+										<picture>
+											<img alt="plant" src="./assets/img/plants/6.webp">
+										</picture>
+									</div>
+									<div class="item-body-product-cart__content">
 										<div data-fls-productinfo="" data-fls-text="" class="item-body-product-cart__info product-info">
-											<h5 class="product-info__title">
-												<a href="product.html">Blushing Bromeliad</a>
-											</h5>
+											<h5 class="product-info__title">Blushing Bromeliad</h5>
 											<p class="product-info__item text">
 												<strong>sku:</strong>
 												19957518757065
 											</p>
+											<p class="product-info__item text">
+												size:
+												<strong>S</strong>
+											</p>
+											<span data-countprice="" class="product-info__price">$119.00</span>
+											<span data-counttotal="" class="product-info__total">$834.00</span>
 										</div>
+										<span data-countprice="" class="item-body-product-cart__price">$139.00</span>
+										<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
+											<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
+											<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">6</div>
+											<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+										</div>
+										<span data-counttotal="" class="item-body-product-cart__total">$834.00</span>
+										<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
+											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
 									</div>
-									<span data-countprice="" class="item-body-product-cart__price">$139.00</span>
-									<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
-										<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
-										<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">6</div>
-										<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
-									</div>
-									<span data-counttotal="" class="item-body-product-cart__total">$834.00</span>
-									<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
-										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</button>
 								</div>
 								<div class="body-product-cart__item item-body-product-cart">
-									<div class="item-body-product-cart__info-product">
-										<div class="item-body-product-cart__image">
-											<picture>
-												<img alt="plant" src="./assets/img/plants/2.webp">
-											</picture>
-										</div>
+									<div class="item-body-product-cart__image">
+										<picture>
+											<img alt="plant" src="./assets/img/plants/7.webp">
+										</picture>
+									</div>
+									<div class="item-body-product-cart__content">
 										<div data-fls-productinfo="" data-fls-text="" class="item-body-product-cart__info product-info">
-											<h5 class="product-info__title">
-												<a href="product.html">Aluminum Plant</a>
-											</h5>
+											<h5 class="product-info__title">Aluminum Plant</h5>
 											<p class="product-info__item text">
 												<strong>sku:</strong>
 												1995751877786
 											</p>
+											<p class="product-info__item text">
+												size:
+												<strong>M</strong>
+											</p>
+											<span data-countprice="" class="product-info__price">$119.00</span>
+											<span data-counttotal="" class="product-info__total">$1,611.00</span>
 										</div>
+										<span data-countprice="" class="item-body-product-cart__price">$179.00</span>
+										<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
+											<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
+											<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">2</div>
+											<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+										</div>
+										<span data-counttotal="" class="item-body-product-cart__total">$1,611.00</span>
+										<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
+											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
 									</div>
-									<span data-countprice="" class="item-body-product-cart__price">$179.00</span>
-									<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
-										<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
-										<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">2</div>
-										<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+								</div>
+								<div class="body-product-cart__item item-body-product-cart">
+									<div class="item-body-product-cart__image">
+										<picture>
+											<img alt="plant" src="./assets/img/plants/8.webp">
+										</picture>
 									</div>
-									<span data-counttotal="" class="item-body-product-cart__total">$1,611.00</span>
-									<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
-										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-											<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</button>
+									<div class="item-body-product-cart__content">
+										<div data-fls-productinfo="" data-fls-text="" class="item-body-product-cart__info product-info">
+											<h5 class="product-info__title">Bird's Nest Fern</h5>
+											<p class="product-info__item text">
+												<strong>sku:</strong>
+												1244968877786
+											</p>
+											<p class="product-info__item text">
+												size:
+												<strong>L</strong>
+											</p>
+											<span data-countprice="" class="product-info__price">$119.00</span>
+											<span data-counttotal="" class="product-info__total">$396.00</span>
+										</div>
+										<span data-countprice="" class="item-body-product-cart__price">$198.00</span>
+										<div data-fls-countactions="" class="item-body-product-cart__quantity count-actions">
+											<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
+											<div class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">2</div>
+											<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+										</div>
+										<span data-counttotal="" class="item-body-product-cart__total">$396.00</span>
+										<button type="button" aria-label="Remove product from cart" class="item-body-product-cart__delete">
+											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M18.8892 9.55408C18.8892 17.5731 20.0435 21.1979 12.2797 21.1979C4.5149 21.1979 5.693 17.5731 5.693 9.55408" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M20.3651 6.47979H4.2146" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M15.7148 6.47979C15.7148 6.47979 16.2434 2.71408 12.2891 2.71408C8.33578 2.71408 8.86435 6.47979 8.86435 6.47979" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
-						<aside class="product-cart__totals totals-product-cart">
-							<h2 class="totals-product-cart__title">Cart Totals</h2>
-							<div class="totals-product-cart__body">
-								<form data-fls-inputform="" class="input-form" method="POST" action="/apply-coupon">
-									<label for="coupon-input">Coupon Apply</label>
-									<div class="input-form__input">
-										<input data-fls-input="" id="coupon-input" type="text" name="coupon_code" data-error="error" placeholder="Enter coupon code here..." aria-label="coupon code">
-										<button type="submit" class="input-form__button">Apply</button>
-									</div>
-								</form>
-								<ul class="totals-product-cart__services services-totals-product-cart">
-									<li class="services-totals-product-cart__item services-totals-product-cart__item--medium">
-										<p class="services-totals-product-cart__name">Subtotal</p>
-										<div class="services-totals-product-cart__price">
-											<span>$2,683.00</span>
+						<aside data-fls-dynamic=".page--productcart, 767.98, 0" class="product-cart__totals totals-product-cart">
+							<div class="totals-product-cart__container">
+								<h2 class="totals-product-cart__title">Cart Totals</h2>
+								<div class="totals-product-cart__body">
+									<form data-fls-inputform="" class="input-form" method="POST" action="/apply-coupon">
+										<label for="coupon-input">Coupon Apply</label>
+										<div class="input-form__input">
+											<input data-fls-input="" id="coupon-input" type="text" name="coupon_code" data-error="error" placeholder="Enter coupon code here..." aria-label="coupon code">
+											<button type="submit" class="input-form__button">Apply</button>
 										</div>
-									</li>
-									<li class="services-totals-product-cart__item">
-										<p class="services-totals-product-cart__name">Coupon Discount</p>
-										<div class="services-totals-product-cart__price">
-											<span>(-) 00.00</span>
-										</div>
-									</li>
-									<li class="services-totals-product-cart__item services-totals-product-cart__item--medium">
-										<p class="services-totals-product-cart__name">Shiping</p>
-										<div class="services-totals-product-cart__price">
-											<span>$16.00</span>
-											<a href="#" target="_blank">View shipping charge</a>
-										</div>
-									</li>
-									<li class="services-totals-product-cart__item services-totals-product-cart__item--medium services-totals-product-cart__item--total">
-										<p class="services-totals-product-cart__name">Total</p>
-										<div class="services-totals-product-cart__price">
-											<span>$2,699.00</span>
-										</div>
-									</li>
-								</ul>
-								<button data-fls-button="" class="button button--border button--fw">Proceed To Checkout</button>
-								<button data-fls-button="" class="button button--withoutbg button--border button--fw">Continue Shopping</button>
+									</form>
+									<ul class="totals-product-cart__services services-totals-product-cart">
+										<li class="services-totals-product-cart__item services-totals-product-cart__item--medium">
+											<p class="services-totals-product-cart__name">Subtotal</p>
+											<div class="services-totals-product-cart__price">
+												<span>$2,683.00</span>
+											</div>
+										</li>
+										<li class="services-totals-product-cart__item">
+											<p class="services-totals-product-cart__name">Coupon Discount</p>
+											<div class="services-totals-product-cart__price">
+												<span>(-) 00.00</span>
+											</div>
+										</li>
+										<li class="services-totals-product-cart__item services-totals-product-cart__item--medium">
+											<p class="services-totals-product-cart__name">Shiping</p>
+											<div class="services-totals-product-cart__price">
+												<span>$16.00</span>
+												<a href="#" target="_blank">View shipping charge</a>
+											</div>
+										</li>
+										<li class="services-totals-product-cart__item services-totals-product-cart__item--medium services-totals-product-cart__item--total">
+											<p class="services-totals-product-cart__name">Total</p>
+											<div class="services-totals-product-cart__price">
+												<span>$2,699.00</span>
+											</div>
+										</li>
+									</ul>
+									<button data-fls-button="" class="button button--border button--fw">Proceed To Checkout</button>
+									<button data-fls-button="" class="button button--withoutbg button--border button--fw">Continue Shopping</button>
+								</div>
 							</div>
 						</aside>
+					</div>
+				</section>
+				<section data-fls-releted="" class="releted">
+					<div class="releted__container">
+						<h3 class="releted__label">You may be interested in</h3>
+						<!-- Оболонка слайдера -->
+						<div data-fls-slider="" data-fls-productcomp="" class="releted__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="releted__wrapper swiper-wrapper">
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<source media="(max-width: 600px)" srcset="./assets/img/plants/1-600.webp" type="image/webp">
+													<source media="(max-width: 1200px)" srcset="./assets/img/plants/1-1200.webp" type="image/webp">
+													<img alt="Plant" src="./assets/img/plants/1.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Beach Spider Lily</a>
+											</h5>
+											<span>$129.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/6.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Blushing Bromeliad</a>
+											</h5>
+											<span>$139.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/7.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Aluminum Plant</a>
+											</h5>
+											<span>$179.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/8.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Bird's Nest Fern</a>
+											</h5>
+											<span>$99.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/10.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Chinese Evergreen</a>
+											</h5>
+											<span>$39.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/2.webp">
+												</picture>
+											</a>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">Barberton Daisy</a>
+											</h5>
+											<span>$119.00</span>
+										</div>
+									</article>
+								</div>
+								<div class="releted__slide swiper-slide">
+									<article class="productcomp__card">
+										<div class="productcomp__product">
+											<a href="product.html" class="productcomp__image">
+												<picture>
+													<img alt="Plant" src="./assets/img/plants/4.webp">
+												</picture>
+											</a>
+											<span class="productcomp__sale">13% OFF</span>
+											<div class="productcomp__actions">
+												<button type="button" aria-label="Add to cart" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.294 16.8721H8.24077C5.65655 16.8721 3.55412 14.7696 3.55412 12.1854V7.3816C3.55412 4.9793 2.35676 2.75568 0.351225 1.43334C-0.00894369 1.19588 -0.108379 0.711439 0.129078 0.35127C0.366535 -0.00893829 0.850939 -0.108412 1.21119 0.129123C2.35606 0.883986 3.28487 1.87959 3.94905 3.02586C4.09258 3.18665 5.24995 4.41338 7.14726 4.41338H16.142C18.596 4.36749 20.5168 6.83021 19.8752 9.19892L18.8397 13.3259C18.3159 15.4138 16.4466 16.8721 14.294 16.8721ZM4.91926 5.53431C5.04912 6.13424 5.11634 6.75284 5.11634 7.3816V12.1854C5.11634 13.9082 6.51796 15.3098 8.24077 15.3098H14.294C15.7291 15.3098 16.9752 14.3377 17.3245 12.9457L18.3599 8.81876C18.7412 7.41128 17.5997 5.94838 16.142 5.9756H7.14722C6.28913 5.9756 5.54224 5.7906 4.91926 5.53431ZM7.85021 19.0201C7.85021 18.4809 7.41307 18.0437 6.87383 18.0437C5.57828 18.0953 5.57942 19.9454 6.87383 19.9965C7.41307 19.9965 7.85021 19.5593 7.85021 19.0201ZM15.6222 19.0201C15.6222 18.4809 15.1851 18.0437 14.6459 18.0437C13.3503 18.0953 13.3514 19.9454 14.6459 19.9965C15.1851 19.9965 15.6222 19.5593 15.6222 19.0201ZM16.9231 8.31893C16.9231 7.88752 16.5734 7.53782 16.142 7.53782H7.45966C6.42329 7.57906 6.42407 9.05914 7.45966 9.10003H16.142C16.5734 9.10003 16.9231 8.75033 16.9231 8.31893Z" fill="#46A358"></path>
+													</svg>
+												</button>
+												<button type="button" aria-label="Add to favorites" class="productcomp__item productcomp__item--favorite">
+													<svg width="16" height="15" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
+													</svg>
+												</button>
+												<a href="product.html" aria-label="view" class="productcomp__item">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="productcomp__body">
+											<h5 class="productcomp__title">
+												<a href="#">African Violet</a>
+											</h5>
+											<span>$199.00</span>
+											<del>$229.00</del>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="releted__pagination swiper-pagination"></div>
+						</div>
 					</div>
 				</section>
 			</main>
@@ -331,9 +643,9 @@
 							</div>
 							<section class="features-footer__item newsletter-features-footer" aria-label="subscribe to news">
 								<h4 class="newsletter-features-footer__title">Would you like to join newsletters?</h4>
-								<form class="newsletter-features-footer__form" method="POST" action="/subscribe">
+								<form data-fls-inputform="" class="newsletter-features-footer__form input-form" method="POST" action="/subscribe">
 									<input data-fls-input="" autocomplete="true" type="email" name="email" data-error="error" required placeholder="enter your email address..." aria-label="email address for subscription">
-									<button type="submit" class="newsletter-features-footer__button">Join</button>
+									<button type="submit" class="input-form__button">Join</button>
 								</form>
 								<div class="newsletter-features-footer__text text">
 									<p>
