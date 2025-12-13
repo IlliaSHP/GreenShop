@@ -617,7 +617,7 @@ const productsData = [
     id: 2,
     name: "Angel Wing Begonia",
     price: 169,
-    image: "assets/img/plants/3.webp",
+    image: "assets/img/plants/3.png",
     category: "potter-plants",
     size: "small",
     isNew: true,
