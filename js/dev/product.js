@@ -1,5 +1,7 @@
 import "./main.min.js";
 import { g as getHash, d as dataMediaQueries, s as slideDown, a as setHash, b as slideUp } from "./common.min.js";
+import "./productcomp.min.js";
+import "./countactions.min.js";
 import "./breadcrumb.min.js";
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
