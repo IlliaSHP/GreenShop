@@ -38,6 +38,7 @@
   cursor: pointer;
   width: 100%;
   border-radius: 0.25rem;
+  color: #3D3D3D;
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 0.2s;
@@ -45,11 +46,15 @@
 .--select-open .select__title {
   text-decoration-color: #3D3D3D;
 }
+.--select-open .select__title .select__value {
+  color: #3D3D3D;
+}
 .select__value {
   display: flex;
   min-width: 0;
   align-items: center;
   gap: 0.3125rem;
+  transition: color 0.3s;
 }
 .select__value > * {
   flex: 1 1 auto;
@@ -104,7 +109,6 @@
   min-width: 100%;
   left: 0;
   background-color: #fff;
-  border-top: 0;
   border: 0.0625rem solid #d9d9d9;
   border-top: 0;
   padding: 0.3125rem 0rem 0.3125rem 0rem;
@@ -142,7 +146,7 @@
 }
 @media (any-hover: hover), (pointer: fine) {
   html:not([data-fls-touch]) .select__title:hover {
-    text-decoration-color: #3D3D3D;
+    text-decoration-color: #ACACAC;
   }
   html:not([data-fls-touch]) .select__option:hover {
     background: #d9d9d9;
@@ -150,7 +154,7 @@
 }
 @media (hover: none) {
   html[data-fls-touch] .select__title:active {
-    text-decoration-color: #3D3D3D;
+    text-decoration-color: #ACACAC;
   }
   html[data-fls-touch] .select__option:active {
     background: #d9d9d9;
