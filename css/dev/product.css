@@ -73,6 +73,7 @@
 .page {
   padding-top: 7.125rem;
 }
+
 .product-action-sticky {
   position: fixed;
   z-index: 5;
@@ -518,6 +519,9 @@
   }
   .page {
     padding-top: 0;
+  }
+  .footer {
+    margin-bottom: 9.375rem;
   }
   .product__container {
     padding-top: 1.25rem;

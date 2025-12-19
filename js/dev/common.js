@@ -190,9 +190,9 @@ addTouchAttr();
 export {
   setHash as a,
   slideUp as b,
-  gotoBlock as c,
+  slideToggle as c,
   dataMediaQueries as d,
-  slideToggle as e,
+  gotoBlock as e,
   bodyLock as f,
   getHash as g,
   bodyUnlock as h,

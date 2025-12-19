@@ -9,108 +9,76 @@
 		<link rel="preload" href="./assets/fonts/cerapro-black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>checkout</title>
-		<script type="module" crossorigin="" src="./js/checkout.min.js?v=1766008358102"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766008358102">
-		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766008358102">
-		<link rel="modulepreload" crossorigin="" href="./js/select.min.js?v=1766008358102">
-		<link rel="modulepreload" crossorigin="" href="./js/breadcrumb.min.js?v=1766008358102">
-		<link rel="modulepreload" crossorigin="" href="./js/headpage.min.js?v=1766008358102">
-		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766008358102">
-		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1766008358102">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1766008358102">
-		<link rel="stylesheet" crossorigin="" href="./css/headpage.min.css?v=1766008358102">
-		<link rel="stylesheet" crossorigin="" href="./css/checkout.min.css?v=1766008358102">
+		<script type="module" crossorigin="" src="./js/checkout.min.js?v=1766174642512"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/select.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/inputform.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/formcomp.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/breadcrumb.min.js?v=1766174642512">
+		<link rel="modulepreload" crossorigin="" href="./js/headpage.min.js?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/inputform.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/formcomp.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/headpage.min.css?v=1766174642512">
+		<link rel="stylesheet" crossorigin="" href="./css/checkout.min.css?v=1766174642512">
 	</head>
 	<body>
 		<div class="wrapper">
-			<!--
-<else-if condition="'false' === 'false'">
-<header data-fls-header data-fls-watcher data-fls-watcher-once data-fls-header-scroll class="header">
-<div class="header__container">
-<button type="button" class="header__logo">
-<img src="@img/logo.svg" alt="logo">
-</button>
-<include src="@components/layout/menu/menu.html" locals='{"active":"checkout"}'></include>
-<div class="header__actions">
-<div class="header__search">
-<input
-type="text"
-class="header__search-input input--header"
-aria-label="Search for plants"
-placeholder="Find your plants"
-data-fls-input
->
-<button type="button" class="header__search-icon" aria-label="Search" title="Search">
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"/>
-</svg>
-</button>
-</div>
-<a href="#" class="header__shop">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"/>
-</svg>
-<span>6</span>
-</a>
-<button data-fls-button data-fls-popup-link="login" class="header__button button button--icon"><img src="@img/icons/login.svg" alt="login">Login</button>
-</div>
-</div>
-</header>
-</else-if>
--->
-			<else>
-				<header data-fls-header="" data-fls-watcher="" data-fls-watcher-once="" data-fls-header-scroll="" class="header">
-					<div class="header__container">
-						<button type="button" class="header__logo">
-							<img src="./assets/img/logo.svg" alt="logo">
-						</button>
-						<div class="header__menu menu">
-							<!-- <button type="button" data-fls-menu class="menu__icon icon-menu"><span></span></button> -->
-							<nav class="menu__body">
-								<ul class="menu__list">
-									<li class="menu__item">
-										<a href="index.html" data-fls-link="" class="menu__link link">
-											<div class="link__inner">
-												<span class="link__main">Home</span>
-												<span class="link__hover">Home</span>
-											</div>
-										</a>
-									</li>
-									<li class="menu__item">
-										<a href="product.html" data-fls-link="" class="menu__link link">
-											<div class="link__inner">
-												<span class="link__main">Shop</span>
-												<span class="link__hover">Shop</span>
-											</div>
-										</a>
-									</li>
-									<li class="menu__item">
-										<a href="#" data-fls-link="" class="menu__link link">
-											<div class="link__inner">
-												<span class="link__main">Plant Care</span>
-												<span class="link__hover">Plant Care</span>
-											</div>
-										</a>
-									</li>
-									<li class="menu__item">
-										<a href="#" data-fls-link="" class="menu__link link">
-											<div class="link__inner">
-												<span class="link__main">Blogs</span>
-												<span class="link__hover">Blogs</span>
-											</div>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<!--
+			<header data-fls-header="" data-fls-watcher="" data-fls-watcher-once="" data-fls-header-scroll="" class="header">
+				<div class="header__container">
+					<button type="button" class="header__logo">
+						<img src="./assets/img/logo.svg" alt="logo">
+					</button>
+					<div class="header__menu menu">
+						<!-- <button type="button" data-fls-menu class="menu__icon icon-menu"><span></span></button> -->
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="index.html" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Home</span>
+											<span class="link__hover">Home</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="product.html" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Shop</span>
+											<span class="link__hover">Shop</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Plant Care</span>
+											<span class="link__hover">Plant Care</span>
+										</div>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-link="" class="menu__link link">
+										<div class="link__inner">
+											<span class="link__main">Blogs</span>
+											<span class="link__hover">Blogs</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!--
 <fetch url="@components/layout/menu/menu.json">
 <each loop='item in response'>
 </each>
 </fetch>
 -->
-						<div class="header__actions">
-							<!--
+					<div class="header__actions">
+						<!--
 <div class="header__search">
 /*
 <button type="button" class="header__search-icon --icon-search" aria-label="Search" title="Search"></button>
@@ -123,37 +91,36 @@ data-fls-input
 <input type="text" class="header__search-input input--header" aria-label="Search for plants" placeholder="Find your plants" data-fls-input>
 </div>
 -->
-							<div class="header__search">
-								<input type="text" class="header__search-input input--header" aria-label="Search for plants" placeholder="Find your plants" data-fls-input="">
-								<button type="button" class="header__search-icon" aria-label="Search" title="Search">
-									<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
-									</svg>
-								</button>
-							</div>
-							<a href="#" class="header__shop">
-								<!-- <img src="@img/icons/shop.svg" alt="shop"> -->
-								<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"></path>
-								</svg>
-								<span>6</span>
-							</a>
-							<button data-fls-button="" data-fls-popup-link="login" class="header__button button button--icon">
-								<img src="./assets/img/icons/login.svg" alt="login">
-								Login
-							</button>
-							<button type="button" aria-label="Plant Search Filter" class="header__filters">
-								<svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10.2154 16.3926H4.28223" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9385 16.3934C13.9385 18.2651 14.5626 18.8884 16.4335 18.8884C18.3043 18.8884 18.9284 18.2651 18.9284 16.3934C18.9284 14.5218 18.3043 13.8984 16.4335 13.8984C14.5626 13.8984 13.9385 14.5218 13.9385 16.3934Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path d="M12.9951 6.77801H18.9274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.27202 6.77677C9.27202 4.90595 8.64786 4.2818 6.77704 4.2818C4.9054 4.2818 4.28125 4.90595 4.28125 6.77677C4.28125 8.64841 4.9054 9.27175 6.77704 9.27175C8.64786 9.27175 9.27202 8.64841 9.27202 6.77677Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+						<div class="header__search">
+							<input type="text" class="header__search-input input--header" aria-label="Search for plants" placeholder="Find your plants" data-fls-input="">
+							<button type="button" class="header__search-icon" aria-label="Search" title="Search">
+								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.5726 16.0029C10.5755 19.1865 4.988 18.3056 2.02842 14.6542C-0.828088 11.129 -0.64944 6.04347 2.44943 2.82482C5.65137 -0.500594 10.6854 -0.944524 14.3346 1.78337C15.642 2.76051 16.6183 4.00364 17.2542 5.50838C17.8938 7.02186 18.0881 8.59654 17.8663 10.2205C17.6452 11.837 17 13.2775 15.9499 14.6217C16.0349 14.6773 16.1255 14.7173 16.1904 14.7822C17.3448 15.9311 18.4947 17.0843 19.6491 18.2331C19.9227 18.5054 20.0589 18.8225 19.9776 19.2047C19.8165 19.9651 18.9107 20.2586 18.3298 19.7366C18.0575 19.4925 17.807 19.2234 17.5484 18.9649C16.6002 18.0177 15.6526 17.0699 14.7044 16.1227C14.665 16.0853 14.6238 16.0503 14.5726 16.0029ZM15.9605 8.98677C15.9705 5.12689 12.8529 2.00627 8.98261 2.00065C5.12292 1.99503 2.00781 5.09068 1.99094 8.94806C1.97408 12.8173 5.08544 15.9467 8.96762 15.9648C12.8117 15.9829 15.9505 12.8504 15.9605 8.98677Z" fill="#3D3D3D"></path>
 								</svg>
 							</button>
 						</div>
+						<a href="#" class="header__shop">
+							<!-- <img src="@img/icons/shop.svg" alt="shop"> -->
+							<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"></path>
+							</svg>
+							<span>6</span>
+						</a>
+						<button data-fls-button="" data-fls-popup-link="login" class="header__button button button--icon">
+							<img src="./assets/img/icons/login.svg" alt="login">
+							Login
+						</button>
+						<button type="button" aria-label="Plant Search Filter" class="header__filters">
+							<svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.2154 16.3926H4.28223" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9385 16.3934C13.9385 18.2651 14.5626 18.8884 16.4335 18.8884C18.3043 18.8884 18.9284 18.2651 18.9284 16.3934C18.9284 14.5218 18.3043 13.8984 16.4335 13.8984C14.5626 13.8984 13.9385 14.5218 13.9385 16.3934Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M12.9951 6.77801H18.9274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.27202 6.77677C9.27202 4.90595 8.64786 4.2818 6.77704 4.2818C4.9054 4.2818 4.28125 4.90595 4.28125 6.77677C4.28125 8.64841 4.9054 9.27175 6.77704 9.27175C8.64786 9.27175 9.27202 8.64841 9.27202 6.77677Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</button>
 					</div>
-				</header>
-			</else>
+				</div>
+			</header>
 			<main class="page page--checkout">
 				<div class="breadcrumb__container breadcrumb">
 					<nav data-fls-breadcrumb="" class="breadcrumb__nav" aria-label="Breadcrumb">
@@ -441,6 +408,155 @@ Apartment, suite, unit, etc. (optional)
 					</div>
 				</section>
 			</main>
+			<!--
+<footer data-fls-footer class="footer">
+<div class="footer__top top-footer">
+<div class="top-footer__container">
+<section class="footer__features features-footer">
+<div class="features-footer__item">
+<div class="features-footer__image">
+<img src="@img/footer/icons/1.svg" alt="Garden Care">
+</div>
+<div class="features-footer__body">
+<h4 class="features-footer__title">Garden Care<h4>
+<div data-fls-text class="features-footer__text text">
+<p>
+We are an online plant shop offering a wide range of cheap and trendy plants.
+</p>
+</div>
+</div>
+</div>
+<div class="features-footer__item">
+<div class="features-footer__image">
+<img src="@img/footer/icons/2.svg" alt="Plant Renovation">
+</div>
+<div class="features-footer__body">
+<h4 class="features-footer__title">Plant Renovation<h4>
+<div data-fls-text class="features-footer__text text">
+<p>
+We are an online plant shop offering a wide range of cheap and trendy plants.
+</p>
+</div>
+</div>
+</div>
+<div class="features-footer__item">
+<div class="features-footer__image">
+<img src="@img/footer/icons/3.svg" alt="Watering Graden">
+</div>
+<div class="features-footer__body">
+<h4 class="features-footer__title">Watering Graden<h4>
+<div data-fls-text class="features-footer__text text">
+<p>
+We are an online plant shop offering a wide range of cheap and trendy plants.
+</p>
+</div>
+</div>
+</div>
+<section class="features-footer__item newsletter-features-footer" aria-label="subscribe to news">
+<h4 class="newsletter-features-footer__title">Would you like to join newsletters?</h4>
+<form data-fls-inputform class="input-form__form" method="POST" action="/subscribe">
+<input data-fls-input autocomplete="true" type="email" name="email" data-error="error" required placeholder="enter your email address..." aria-label="email address for subscription">
+<button type="submit" class="input-form__button">Join</button>
+</form>
+<div class="newsletter-features-footer__text text">
+<p>We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours! </p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<div class="footer__divider divider-footer">
+<div class="divider-footer__container">
+<div class="divider-footer__logo">
+<img src="@img/logo.svg" alt="logo">
+</div>
+<address class="divider-footer__item text">
+<img src="@img/icons/location.svg" alt="icon location">
+<p>70 West Buckingham Ave. Farmingdale, NY 11735</p>
+</address>
+<address class="divider-footer__item text">
+<img src="@img/icons/message.svg" alt="icon message">
+<a href="mailto:contact@greenshop.com">contact@greenshop.com</a>
+</address>
+<address class="divider-footer__item text">
+<img src="@img/icons/calling.svg" alt="icon calling">
+<a href="tel:+18801917490">+88 0191 717 490</a>
+</address>
+</div>
+</div>
+<div class="footer__links links-footer">
+<div class="links-footer__container">
+<div class="links-footer__items items-links-footer">
+<div class="items-links-footer__item">
+<h4 class="items-links-footer__title">My Account</h4>
+<ul class="items-links-footer__list list-items-links-footer">
+<li class="list-links-footer__item text"><a href="account.html">My Account</a></li>
+<li class="list-links-footer__item text"><a href="#">Our stores</a></li>
+<li class="list-links-footer__item text"><a href="#">Contact us</a></li>
+<li class="list-links-footer__item text"><a href="#">Career</a></li>
+<li class="list-links-footer__item text"><a href="#">Specials</a></li>
+</ul>
+</div>
+<div class="items-links-footer__item">
+<h4 class="items-links-footer__title">Help & Guide</h4>
+<ul class="items-links-footer__list list-items-links-footer">
+<li class="list-links-footer__item text"><a href="#">Help Center</a></li>
+<li class="list-links-footer__item text"><a href="#">How to Buy</a></li>
+<li class="list-links-footer__item text"><a href="#">Shipping & Delivery</a></li>
+<li class="list-links-footer__item text"><a href="#">Product Policy</a></li>
+<li class="list-links-footer__item text"><a href="#">How to Return</a></li>
+</ul>
+</div>
+<div class="items-links-footer__item">
+<h4 class="items-links-footer__title">Categories</h4>
+<ul class="items-links-footer__list list-items-links-footer">
+<li class="list-links-footer__item text"><a href="#">House Plants</a></li>
+<li class="list-links-footer__item text"><a href="#">How to Buy</a></li>
+<li class="list-links-footer__item text"><a href="#">Shipping & Delivery</a></li>
+<li class="list-links-footer__item text"><a href="#">Product Policy</a></li>
+<li class="list-links-footer__item text"><a href="#">How to Return</a></li>
+</ul>
+</div>
+<div class="items-links-footer__item items-links-footer__item--social">
+<div class="items-links-footer__social social-items-links-footer">
+<h4 class="social-items-links-footer__title">Social Media</h4>
+<div class="social-items-links-footer__items">
+<a href="#" class="social-items-links-footer__item">
+<img src="@img/icons/facebook.svg" alt="facebook">
+</a>
+<a href="#" class="social-items-links-footer__item">
+<img src="@img/icons/instagram.svg" alt="instagram">
+</a>
+<a href="#" class="social-items-links-footer__item">
+<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.03186 13.0036C11.0699 13.0036 14.3718 8.00118 14.3718 3.66357C14.3718 3.52144 14.3689 3.38005 14.3624 3.2392C15.0033 2.77588 15.5605 2.19756 16 1.53953C15.4118 1.80085 14.7789 1.97682 14.1149 2.05616C14.7926 1.64981 15.313 1.0067 15.5585 0.24021C14.9241 0.616357 14.2217 0.889688 13.4742 1.03709C12.8749 0.399076 12.0218 0 11.0779 0C9.26483 0 7.79464 1.4702 7.79464 3.28233C7.79464 3.54001 7.82357 3.79041 7.87962 4.0308C5.1516 3.89377 2.73239 2.58735 1.11352 0.601253C0.831273 1.08622 0.668767 1.64999 0.668767 2.25106C0.668767 3.38988 1.24837 4.3953 2.12968 4.98363C1.59121 4.96707 1.08531 4.81894 0.642926 4.57291C0.642198 4.58656 0.642198 4.60039 0.642198 4.61476C0.642198 6.2047 1.77392 7.53204 3.27578 7.83285C3.00008 7.90801 2.71001 7.94841 2.41047 7.94841C2.19901 7.94841 1.99338 7.9273 1.79339 7.88927C2.21121 9.19332 3.42318 10.1425 4.86007 10.1693C3.73636 11.0499 2.32094 11.5745 0.783049 11.5745C0.518272 11.5745 0.256952 11.5594 0 11.529C1.45273 12.46 3.17769 13.0036 5.03186 13.0036Z" fill="#46A358" fill-opacity="0.6"/>
+</svg>
+</a>
+<a href="#" class="social-items-links-footer__item">
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.33333 1.66667C3.33333 2.6 2.6 3.33333 1.66667 3.33333C0.733333 3.33333 0 2.6 0 1.66667C0 0.733333 0.733333 0 1.66667 0C2.6 0 3.33333 0.733333 3.33333 1.66667ZM3.33333 4.66667H0V15.3333H3.33333V4.66667ZM8.66667 4.66667H5.33333V15.3333H8.66667V9.73333C8.66667 6.6 12.6667 6.33333 12.6667 9.73333V15.3333H16V8.6C16 3.33333 10.0667 3.53333 8.66667 6.13333V4.66667Z" fill="#46A358" fill-opacity="0.6"/>
+</svg>
+</a>
+<a href="#" class="social-items-links-footer__item">
+<img src="@img/icons/youtube.svg" alt="youtube">
+</a>
+</div>
+</div>
+<div class="items-links-footer__payment payment-items-links-footer">
+<h4 class="payment-items-links-footer__title">We accept</h4>
+<img src="@img/footer/payment.jpg" alt="payment">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer__bottom bottom-footer">
+<div class="bottom-footer__container">
+<p>&copy; 2021 GreenShop. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+-->
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__top top-footer">
 					<div class="top-footer__container">
