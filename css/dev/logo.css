@@ -25,3 +25,23 @@
     opacity: 1;
   }
 }
+.logo {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.logo svg {
+  width: 2.14375rem;
+  height: 2.14375rem;
+}
+.logo__company {
+  text-transform: uppercase;
+  font-size: 1.1875rem;
+  font-weight: 900;
+  color: #46A358;
+}
+@media (max-width: 29.99875em) {
+  .logo__company {
+    display: none;
+  }
+}

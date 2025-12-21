@@ -1,8 +1,10 @@
 import "./main.min.js";
+import "./closebtn.min.js";
 import "./select.min.js";
 import "./inputform.min.js";
-import "./formcomp.min.js";
+import "./form.min.js";
 import "./breadcrumb.min.js";
+import "./logo.min.js";
 import "./headpage.min.js";
 import "./common.min.js";
 const autoHeight = () => {

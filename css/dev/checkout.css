@@ -102,9 +102,6 @@
     opacity: 1;
   }
 }
-.header .header__filters {
-  display: none;
-}
 
 .page--checkout .head-page {
   padding-bottom: 2.25rem;

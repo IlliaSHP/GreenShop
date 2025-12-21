@@ -1,4 +1,4 @@
-import { e as gotoBlock } from "./common.min.js";
+import { g as gotoBlock } from "./common.min.js";
 import { f as formValidate } from "./select.min.js";
 var inputmask_min$1 = { exports: {} };
 var inputmask_min = inputmask_min$1.exports;
@@ -2756,49 +2756,3 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
-document.addEventListener("DOMContentLoaded", () => {
-  const viewPassButtons = document.querySelectorAll(".form-comp__viewpass");
-  if (viewPassButtons.length > 0) {
-    viewPassButtons.forEach((btn) => {
-      btn.addEventListener("click", function() {
-        const wrapper = this.closest(".form-comp__pass-wrapper");
-        const input = wrapper ? wrapper.querySelector(".form-comp__input") : null;
-        if (input) {
-          if (input.type === "password") {
-            input.type = "text";
-            this.classList.add("form-comp__viewpass--active");
-          } else {
-            input.type = "password";
-            this.classList.remove("form-comp__viewpass--active");
-          }
-        }
-      });
-    });
-  }
-  const photoInput = document.getElementById("user-photo");
-  const photoPreviewContainer = document.getElementById("photo-preview");
-  const removeBtn = document.getElementById("remove-photo-btn");
-  if (photoInput && photoPreviewContainer && removeBtn) {
-    const defaultContent = photoPreviewContainer.innerHTML;
-    photoInput.addEventListener("change", function() {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          photoPreviewContainer.innerHTML = "";
-          const newImg = document.createElement("img");
-          newImg.src = e.target.result;
-          newImg.alt = "User photo";
-          photoPreviewContainer.appendChild(newImg);
-          removeBtn.removeAttribute("disabled");
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-    removeBtn.addEventListener("click", function() {
-      photoInput.value = "";
-      photoPreviewContainer.innerHTML = defaultContent;
-      this.setAttribute("disabled", "true");
-    });
-  }
-});

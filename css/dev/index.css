@@ -25,6 +25,7 @@
     opacity: 1;
   }
 }
+
 .hero {
   padding-top: 5.625rem;
 }
@@ -161,32 +162,6 @@
 }
 .catalog-filters__headear {
   display: none;
-}
-.catalog-filters__close {
-  position: relative;
-  width: 1.875rem;
-  height: 1.875rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-}
-.catalog-filters__close::before, .catalog-filters__close::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.125rem;
-  background-color: #333;
-  top: 50%;
-  left: 0;
-  transform-origin: center;
-  transition: transform 0.3s ease-out, background-color 0.3s;
-}
-.catalog-filters__close::before {
-  transform: translateY(-50%) rotate(45deg);
-}
-.catalog-filters__close::after {
-  transform: translateY(-50%) rotate(-45deg);
 }
 .categories-catalog-filters__title, .categories-catalog-filters__list, .price-range-catalog-filters__title, .price-range-catalog-filters__list,
 .size-catalog-filters__title,
@@ -626,6 +601,7 @@
   .catalog-filters__headear {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 2.1875rem;
   }
   .sale-catalog-filters {
@@ -692,6 +668,18 @@
   }
 }
 @media (max-width: 47.99875em) {
+  .header .header__logo {
+    display: none;
+  }
+  .header .header__shop {
+    display: none;
+  }
+  .header .header__button {
+    display: none;
+  }
+  .header .menu {
+    display: none;
+  }
   .hero {
     padding-top: 6.5625rem;
   }
@@ -1094,12 +1082,6 @@
     cursor: pointer;
     background-color: rgba(70, 163, 88, 0.55);
   }
-  html:not([data-fls-touch]) .catalog-filters__close:hover::before {
-    transform: translateY(-50%) rotate(40deg);
-  }
-  html:not([data-fls-touch]) .catalog-filters__close:hover::after {
-    transform: translateY(-50%) rotate(-40deg);
-  }
   html:not([data-fls-touch]) .size-catalog-filters__item:hover, html:not([data-fls-touch]) .size-catalog-filters__item label:hover, html:not([data-fls-touch]) .categories-catalog-filters__item:hover, html:not([data-fls-touch]) .categories-catalog-filters__item label:hover {
     color: #46A358;
     cursor: pointer;
@@ -1134,12 +1116,6 @@
   html[data-fls-touch] .slider-hero__pagination span:active {
     cursor: pointer;
     background-color: rgba(70, 163, 88, 0.55);
-  }
-  html[data-fls-touch] .catalog-filters__close:active::before {
-    transform: translateY(-50%) rotate(40deg);
-  }
-  html[data-fls-touch] .catalog-filters__close:active::after {
-    transform: translateY(-50%) rotate(-40deg);
   }
   html[data-fls-touch] .size-catalog-filters__item:active, html[data-fls-touch] .size-catalog-filters__item label:active, html[data-fls-touch] .categories-catalog-filters__item:active, html[data-fls-touch] .categories-catalog-filters__item label:active {
     color: #46A358;
