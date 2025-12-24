@@ -151,6 +151,7 @@
 }
 .productcomp__item--favorite.productcomp__item--active svg path {
   stroke: #46A358;
+  fill: #46A358;
 }
 .productcomp__body > *:not(:last-child) {
   margin-bottom: 0.375rem;

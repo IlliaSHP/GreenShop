@@ -117,37 +117,54 @@ class DynamicAdapt {
 if (document.querySelector("[data-fls-dynamic]")) {
   window.addEventListener("load", () => window.flsDynamic = new DynamicAdapt());
 }
-const quantityInput = document.querySelector(".count-actions__quantity");
-const plusButtons = document.querySelectorAll(".count-actions__button--plus, .product-action-sticky__count-btn--plus");
-const minusButtons = document.querySelectorAll(".count-actions__button--minus, .product-action-sticky__count-btn--minus");
-function getQuantity() {
-  let quantity = parseInt(quantityInput.textContent.trim()) || 1;
-  return Math.max(1, quantity);
-}
-function setQuantity(value) {
-  value = Math.max(1, parseInt(value) || 1);
-  quantityInput.textContent = value;
-}
-plusButtons.forEach((button) => {
-  button.addEventListener("click", function(e) {
+const countActionsContainers = document.querySelectorAll("[data-fls-countactions]");
+countActionsContainers.forEach((container) => {
+  const quantityInput = container.querySelector("[data-count-quantity]");
+  const plusButton = container.querySelector("[data-count-plus]");
+  const minusButton = container.querySelector("[data-count-minus]");
+  if (!quantityInput || !plusButton || !minusButton) return;
+  const productItem = container.closest(".item-body-product-cart");
+  let priceElement, totalElements;
+  if (productItem) {
+    priceElement = productItem.querySelector(".item-body-product-cart__price");
+    totalElements = productItem.querySelectorAll("[data-countTotal]");
+  }
+  function updatePrice() {
+    if (priceElement && totalElements.length > 0) {
+      const price = parseFloat(priceElement.textContent.replace(/[^0-9.]/g, "")) || 0;
+      const qty = parseInt(quantityInput.textContent.trim()) || 1;
+      const total = (price * qty).toFixed(2);
+      totalElements.forEach((el) => el.textContent = `$${total}`);
+    }
+  }
+  function getQuantity() {
+    let quantity = parseInt(quantityInput.textContent.trim()) || 1;
+    return Math.max(1, quantity);
+  }
+  function setQuantity(value) {
+    value = Math.max(1, parseInt(value) || 1);
+    quantityInput.textContent = value;
+    updatePrice();
+  }
+  plusButton.addEventListener("click", function(e) {
     e.preventDefault();
     const currentQuantity = getQuantity();
     setQuantity(currentQuantity + 1);
   });
-});
-minusButtons.forEach((button) => {
-  button.addEventListener("click", function(e) {
+  minusButton.addEventListener("click", function(e) {
     e.preventDefault();
     const currentQuantity = getQuantity();
     if (currentQuantity > 1) {
       setQuantity(currentQuantity - 1);
     }
   });
-});
-quantityInput.addEventListener("blur", function() {
-  let value = parseInt(this.textContent.trim()) || 1;
-  this.textContent = Math.max(1, value);
-});
-quantityInput.addEventListener("input", function() {
-  this.textContent = this.textContent.replace(/[^0-9]/g, "");
+  quantityInput.addEventListener("blur", function() {
+    let value = parseInt(this.textContent.trim()) || 1;
+    this.textContent = Math.max(1, value);
+    updatePrice();
+  });
+  quantityInput.addEventListener("input", function() {
+    this.textContent = this.textContent.replace(/[^0-9]/g, "");
+  });
+  updatePrice();
 });

@@ -40,8 +40,3 @@
   font-weight: 900;
   color: #46A358;
 }
-@media (max-width: 29.99875em) {
-  .logo__company {
-    display: none;
-  }
-}

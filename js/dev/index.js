@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const filtersButton = document.querySelector(".header__filters");
   const catalogFilters = document.querySelector(".catalog-filters");
   const closeFiltersButton = document.querySelector(".catalog-filters__close");
+  const logoButton = document.querySelector(".catalog-filters__logo");
   const html = document.documentElement;
   let closeActive = false;
   if (filtersButton) {
@@ -20,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function() {
         html.setAttribute("data-filters-open", "");
         html.setAttribute("data-fls-scrolllock", "");
       }
+    });
+  }
+  if (logoButton) {
+    logoButton.addEventListener("click", function() {
+      html.removeAttribute("data-filters-open");
+      html.removeAttribute("data-fls-scrolllock");
     });
   }
   if (closeFiltersButton) {

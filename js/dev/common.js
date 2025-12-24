@@ -14,6 +14,15 @@ const isMobile = { Android: function() {
 function addTouchAttr() {
   if (isMobile.any()) document.documentElement.setAttribute("data-fls-touch", "");
 }
+function addLoadedAttr() {
+  if (!document.documentElement.hasAttribute("data-fls-preloader-loading")) {
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        document.documentElement.setAttribute("data-fls-loaded", "");
+      }, 0);
+    });
+  }
+}
 function getHash() {
   if (location.hash) {
     return location.hash.replace("#", "");
@@ -187,15 +196,16 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
   }
 };
 addTouchAttr();
+addLoadedAttr();
 export {
-  slideUp as a,
-  getHash as b,
-  slideDown as c,
+  getHash as a,
+  bodyUnlock as b,
+  slideUp as c,
   dataMediaQueries as d,
-  setHash as e,
-  bodyLock as f,
+  slideDown as e,
+  setHash as f,
   gotoBlock as g,
-  bodyUnlock as h,
+  bodyLock as h,
   bodyLockStatus as i,
   bodyLockToggle as j,
   slideToggle as s,

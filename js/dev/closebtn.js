@@ -1,4 +1,4 @@
-import { b as getHash, d as dataMediaQueries, c as slideDown, e as setHash, a as slideUp, f as bodyLock, h as bodyUnlock, i as bodyLockStatus, j as bodyLockToggle, u as uniqArray } from "./common.min.js";
+import { a as getHash, d as dataMediaQueries, e as slideDown, f as setHash, c as slideUp, h as bodyLock, b as bodyUnlock, i as bodyLockStatus, j as bodyLockToggle, u as uniqArray } from "./common.min.js";
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
   let tabsActiveHash = [];
@@ -435,6 +435,19 @@ if (toggleButton && headerBottom) {
 } else {
   if (!toggleButton) console.log("Елемент .togle-nav-header-bottom__button не знайдено");
   if (!headerBottom) console.log("Елемент .header-bottom не знайдено");
+}
+const searchIcon = document.querySelector(".header__search-icon");
+const searchInput = document.querySelector(".header__search-input");
+const searchContainer = document.querySelector(".header__search");
+if (searchIcon && searchInput && searchContainer) {
+  searchIcon.addEventListener("click", function() {
+    searchInput.classList.toggle("input-active");
+  });
+  document.addEventListener("click", function(e) {
+    if (!searchContainer.contains(e.target)) {
+      searchInput.classList.remove("input-active");
+    }
+  });
 }
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");

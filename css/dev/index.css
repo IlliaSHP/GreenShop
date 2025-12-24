@@ -354,6 +354,10 @@
   opacity: 1;
 }
 
+.sort-catalog-content-catalog .select__title {
+  min-width: 8.125rem;
+}
+
 .sort-catalog__label, .sort-catalog select {
   font-size: 0.9375rem;
   line-height: 1.06666667; /* 16/15 */
@@ -579,6 +583,16 @@
     max-width: 55%;
   }
 }
+@media (width <= 59.375em) and (width > 59.375em) {
+  .catalog-filters__headear {
+    margin-bottom: 2.1875rem;
+  }
+}
+@media (width <= 59.375em) and (width <= 29.99875em) {
+  .catalog-filters__headear {
+    margin-bottom: 1.5625rem;
+  }
+}
 @media (width <= 59.375em) {
   .catalog__filters {
     position: fixed;
@@ -602,7 +616,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.1875rem;
   }
   .sale-catalog-filters {
     display: none;
@@ -681,7 +694,7 @@
     display: none;
   }
   .hero {
-    padding-top: 6.5625rem;
+    padding-top: 5.9375rem;
   }
   .hero__wrapper {
     background: url("../assets/img/hero/bg.webp") no-repeat center center/cover;
@@ -758,6 +771,22 @@
     gap: 1.25rem;
   }
 }
+@media (max-width: 29.99875em) and (hover: none) {
+  html[data-fls-touch] .hero__button:active {
+    background: transparent;
+  }
+  html[data-fls-touch] .hero__button:active svg {
+    margin-left: 0.1875rem;
+  }
+}
+@media (max-width: 29.99875em) and (any-hover: hover), (max-width: 29.99875em) and (pointer: fine) {
+  html:not([data-fls-touch]) .hero__button:hover {
+    background: transparent;
+  }
+  html:not([data-fls-touch]) .hero__button:hover svg {
+    margin-left: 0.1875rem;
+  }
+}
 @media (max-width: 29.99875em) {
   .hero__wrapper {
     border-radius: 1.875rem;
@@ -771,6 +800,9 @@
     background: transparent;
     color: #46A358;
     font-size: 0.875rem;
+  }
+  .hero__button svg {
+    transition: margin 0.3s;
   }
   .hero__button svg path {
     stroke: #46A358;
@@ -787,9 +819,6 @@
   }
   .catalog__filters {
     max-width: 18.125rem;
-  }
-  .catalog-filters__headear {
-    margin-bottom: 1.875rem;
   }
   .content-catalog__cards {
     grid-template-columns: repeat(2, 1fr);
@@ -876,6 +905,11 @@
   }
   .slider-hero__images {
     max-height: 22.5625rem;
+  }
+}
+@media (width <= 59.375em) and (width > 29.99875em) and (width <= 59.375em) {
+  .catalog-filters__headear {
+    margin-bottom: clamp( 1.5625rem , 0.92425588273125rem  +  2.1275690396vw , 2.1875rem );
   }
 }
 @media (width <= 59.375em) and (min-width: 45em) {

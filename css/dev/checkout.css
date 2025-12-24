@@ -175,7 +175,6 @@
 }
 .checkout__container {
   display: flex;
-  flex-wrap: wrap;
 }
 .checkout__body {
   flex: 1 1 auto;
@@ -416,18 +415,20 @@
   border-bottom: 0.0625rem solid rgba(70, 163, 88, 0.2);
 }
 .popup--order .info-content-popup-order__items {
-  display: flex;
-  column-gap: 2.8125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 0.75fr 1.2fr;
+}
+.popup--order .info-content-popup-order__items {
+  --columnGapItems: clamp(1.5625rem, calc(-0.51527801826875rem + 4.3288169343vw), 2.8125rem);
+  column-gap: var(--columnGapItems);
   row-gap: 0.625rem;
-  flex-wrap: wrap;
-  justify-content: center;
   overflow: hidden;
 }
 .popup--order .info-content-popup-order__item {
+  max-width: 7.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.1875rem;
-  max-width: 7.5rem;
 }
 .popup--order .info-content-popup-order__item:not(:first-child) {
   position: relative;
@@ -438,8 +439,8 @@
   width: 0.0625rem;
   height: calc(100% - 0.25rem);
   top: 0;
-  left: -1.40625rem;
   background-color: rgba(70, 163, 88, 0.2);
+  left: calc(var(--columnGapItems) / 2 * -1);
 }
 .popup--order .info-content-popup-order__label {
   font-size: 0.875rem;
@@ -512,6 +513,11 @@
     gap: 1.125rem;
   }
 }
+@media (width <= 47.99875em) {
+  .popup--order .info-content-popup-order__items {
+    column-gap: 1.5625rem;
+  }
+}
 @media (max-width: 47.99875em) {
   .header {
     display: none;
@@ -581,6 +587,11 @@
     padding-inline: 1.875rem;
   }
 }
+@media (width <= 37.5em) {
+  .popup--order .info-content-popup-order__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 36.24875em) {
   .body-order-checkout .item-order-checkout {
     padding-top: 0.8125rem;
@@ -633,6 +644,11 @@
     justify-self: end;
   }
 }
+@media (max-width: 26.875em) {
+  .popup--order .info-content-popup-order__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 25em) {
   .body-order-checkout .item-order-checkout {
     grid-template-columns: 5.3125rem 2fr 0.25fr;
@@ -667,6 +683,11 @@
 @media (width > 29.99875em) and (width <= 61.99875em) {
   .popup--order .content-popup-order__button .button {
     margin-top: clamp( 1.875rem , 0.76176513671875rem  +  3.7109375vw , 3.0625rem );
+  }
+}
+@media (width > 47.99875em) and (width <= 76.875em) {
+  .popup--order .info-content-popup-order__items {
+    column-gap: clamp( 1.5625rem , -0.51527801826875rem  +  4.3288169343vw , 2.8125rem );
   }
 }
 @media (min-width: 47.99875em) and (width > 76.875em) {
@@ -751,6 +772,9 @@
   }
   .list-payment-order__item:last-child {
     margin-bottom: 3.0625rem;
+  }
+  .popup--order .info-content-popup-order__items {
+    column-gap: 2.8125rem;
   }
 }
 @media (any-hover: hover), (pointer: fine) {

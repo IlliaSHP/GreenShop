@@ -27,13 +27,6 @@
     fetch(link.href, fetchOpts);
   }
 })();
-const searchIcon = document.querySelector(".header__search-icon");
-const searchInput = document.querySelector(".header__search-input");
-if (searchIcon && searchInput) {
-  searchIcon.addEventListener("click", function() {
-    searchInput.classList.toggle("input-active");
-  });
-}
 document.addEventListener("DOMContentLoaded", () => {
   const viewPassButtons = document.querySelectorAll(".form-comp__viewpass");
   if (viewPassButtons.length > 0) {

@@ -9,21 +9,21 @@
 		<link rel="preload" href="./assets/fonts/cerapro-black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1766429261289"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/closebtn.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/select.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/productcomp.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/inputform.min.js?v=1766429261289">
-		<link rel="modulepreload" crossorigin="" href="./js/logo.min.js?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/closebtn.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/productcomp.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/inputform.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/logo.min.css?v=1766429261289">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1766429261289">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1766606269090"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/closebtn.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/select.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/productcomp.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/inputform.min.js?v=1766606269090">
+		<link rel="modulepreload" crossorigin="" href="./js/logo.min.js?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/closebtn.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/productcomp.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/inputform.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/logo.min.css?v=1766606269090">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1766606269090">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -38,22 +38,28 @@
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
 								<li class="menu__item">
-									<a href="index.html" data-fls-link="" class="menu__link link menu__link--active">
+									<a href="index.html#hero" data-fls-scrollto-header="" data-fls-scrollto="#hero" data-fls-link="" class="menu__link link menu__link--active">
 										<div class="link__inner">
 											<span class="link__main">Home</span>
 											<span class="link__hover">Home</span>
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
 								<li class="menu__item">
-									<a href="product.html" data-fls-link="" class="menu__link link">
+									<a href="product.html#product" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
 											<span class="link__main">Shop</span>
 											<span class="link__hover">Shop</span>
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
+								<!-- * Теж саме тільки без false щоб в шляху сайту не було false -->
 								<li class="menu__item">
 									<a href="#" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
@@ -62,8 +68,9 @@
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
 								<li class="menu__item">
-									<a href="#" data-fls-link="" class="menu__link link">
+									<a href="index.html#blog__container" data-fls-scrollto-header="" data-fls-scrollto="#blog__container" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
 											<span class="link__main">Blogs</span>
 											<span class="link__hover">Blogs</span>
@@ -82,7 +89,7 @@
 								</svg>
 							</button>
 						</div>
-						<a href="#" class="header__shop">
+						<a href="product-cart.html" class="header__shop">
 							<!-- <img src="@img/icons/shop.svg" alt="shop"> -->
 							<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"></path>
@@ -139,7 +146,7 @@
 				<div class="header-bottom__action action-right-header-bottom">
 					<ul class="header-bottom__list">
 						<li class="header-bottom__item">
-							<a href="product.html" class="header-bottom__link" aria-label="Shop">
+							<a href="product-cart.html" class="header-bottom__link" aria-label="Shop">
 								<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M18.3334 6.80137L17.3897 12.7778C17.2182 13.9563 16.2745 14.7138 15.0736 14.7138H6.83828C5.72308 14.7138 4.69367 13.8721 4.5221 12.7778L3.49269 5.79127L3.23533 3.85524C3.14955 3.35019 2.72063 3.01349 2.12014 3.01349H1.51965C1.17651 3.01349 0.833374 2.67679 0.833374 2.34009C0.833374 2.00339 1.17651 1.66669 1.51965 1.66669H2.12014C3.32112 1.66669 4.35053 2.50844 4.43632 3.68689L4.60788 5.03369H16.7893C17.2182 5.03369 17.6471 5.20204 17.9045 5.53874C18.2476 5.87544 18.3334 6.38049 18.3334 6.80137Z" fill="#D9D9D9"></path>
 									<path d="M15.2451 18.3334C15.7189 18.3334 16.103 17.9565 16.103 17.4916C16.103 17.0267 15.7189 16.6499 15.2451 16.6499C14.7714 16.6499 14.3873 17.0267 14.3873 17.4916C14.3873 17.9565 14.7714 18.3334 15.2451 18.3334Z" fill="#D9D9D9"></path>
@@ -167,7 +174,7 @@
 				</div>
 			</nav>
 			<main class="page home-page">
-				<section class="hero">
+				<section data-fls-watcher="navigator" class="hero" id="hero">
 					<div class="hero__container">
 						<div class="hero__wrapper">
 							<div class="hero__content">
@@ -259,7 +266,7 @@
 						<aside class="catalog__filters catalog-filters">
 							<div class="catalog-filters__body">
 								<div class="catalog-filters__headear">
-									<button type="button" class="catalog-filters__logo">
+									<button type="button" data-fls-scrollto-header="" data-fls-scrollto=".hero" class="catalog-filters__logo">
 										<img src="./assets/img/logo.svg" alt="logo">
 									</button>
 									<button data-fls-closebtn="" type="button" aria-label="close-filter" class="catalog-filters__close close-btn"></button>
@@ -717,7 +724,7 @@
 					</div>
 				</section>
 				<section class="blog">
-					<div class="blog__container">
+					<div data-fls-watcher="navigator" class="blog__container" id="blog__container">
 						<div class="blog__block-header block-header">
 							<h2 class="block-header__title">Our Blog Posts</h2>
 							<div class="block-header__text">

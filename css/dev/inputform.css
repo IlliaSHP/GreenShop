@@ -429,7 +429,7 @@
     text-decoration-color: #46A358;
   }
   html:not([data-fls-touch]) .social-items-links-footer__item:hover {
-    background-color: rgba(70, 163, 88, 0.2);
+    background-color: rgba(103, 166, 116, 0.1);
   }
   html:not([data-fls-touch]) .input-form__button:hover {
     background-color: #4bb662;
@@ -445,7 +445,7 @@
     text-decoration-color: #46A358;
   }
   html[data-fls-touch] .social-items-links-footer__item:active {
-    background-color: rgba(70, 163, 88, 0.2);
+    background-color: rgba(103, 166, 116, 0.1);
   }
   html[data-fls-touch] .input-form__button:active {
     background-color: #4bb662;

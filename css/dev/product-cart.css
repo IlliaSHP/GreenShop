@@ -180,9 +180,6 @@
 .totals-product-cart__body .button {
   justify-content: center;
 }
-.totals-product-cart__body .button--withoutbg {
-  display: none;
-}
 .services-totals-product-cart__item {
   display: flex;
   justify-content: space-between;
@@ -243,7 +240,7 @@
 }
 @media (max-width: 47.99875em) and (width <= 20em) {
   .footer {
-    padding-bottom: 21.875rem;
+    padding-bottom: 21.25rem;
   }
 }
 @media (max-width: 47.99875em) and (hover: none) {
@@ -329,6 +326,9 @@
     border-top-right-radius: 2.5rem;
   }
   .totals-product-cart__title {
+    display: none;
+  }
+  .totals-product-cart__body .button--withoutbg {
     display: none;
   }
 }
@@ -457,7 +457,7 @@
 }
 @media (max-width: 47.99875em) and (width > 20em) and (width <= 31.25em) {
   .footer {
-    padding-bottom: clamp( 21.875rem , 19.652777777775rem  +  11.1111111111vw , 23.125rem );
+    padding-bottom: clamp( 21.25rem , 17.91666666666875rem  +  16.6666666667vw , 23.125rem );
   }
 }
 @media (width > 61.99875em) and (width <= 76.875em) {

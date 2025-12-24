@@ -9,23 +9,23 @@
 		<link rel="preload" href="./assets/fonts/cerapro-black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>product</title>
-		<script type="module" crossorigin="" src="./js/product.min.js?v=1766429261286"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/closebtn.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/productcomp.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/inputform.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/countactions.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/breadcrumb.min.js?v=1766429261286">
-		<link rel="modulepreload" crossorigin="" href="./js/logo.min.js?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/closebtn.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/productcomp.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/inputform.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/countactions.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/logo.min.css?v=1766429261286">
-		<link rel="stylesheet" crossorigin="" href="./css/product.min.css?v=1766429261286">
+		<script type="module" crossorigin="" src="./js/product.min.js?v=1766606269084"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/closebtn.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/productcomp.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/inputform.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/countactions.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/breadcrumb.min.js?v=1766606269084">
+		<link rel="modulepreload" crossorigin="" href="./js/logo.min.js?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/closebtn.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/productcomp.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/inputform.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/countactions.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumb.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/logo.min.css?v=1766606269084">
+		<link rel="stylesheet" crossorigin="" href="./css/product.min.css?v=1766606269084">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -40,22 +40,30 @@
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
 								<li class="menu__item">
-									<a href="index.html" data-fls-link="" class="menu__link link">
+									<a href="index.html#hero" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
 											<span class="link__main">Home</span>
 											<span class="link__hover">Home</span>
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
+								<!-- * Теж саме що в попередньому випадку -->
 								<li class="menu__item">
-									<a href="product.html" data-fls-link="" class="menu__link link menu__link--active">
+									<a href="product.html#product" data-fls-scrollto-header="" data-fls-scrollto="#product" data-fls-link="" class="menu__link link menu__link--active">
 										<div class="link__inner">
 											<span class="link__main">Shop</span>
 											<span class="link__hover">Shop</span>
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
+								<!-- * Теж саме тільки без false щоб в шляху сайту не було false -->
 								<li class="menu__item">
 									<a href="#" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
@@ -64,8 +72,10 @@
 										</div>
 									</a>
 								</li>
+								<!-- todo Плавна прокрутка на сторінці index.html (з активним "Home") -->
+								<!-- todo Плавна прокрутка на сторінці product.html (з активним "Shop") -->
 								<li class="menu__item">
-									<a href="#" data-fls-link="" class="menu__link link">
+									<a href="index.html#blog__container" data-fls-link="" class="menu__link link">
 										<div class="link__inner">
 											<span class="link__main">Blogs</span>
 											<span class="link__hover">Blogs</span>
@@ -84,7 +94,7 @@
 								</svg>
 							</button>
 						</div>
-						<a href="#" class="header__shop">
+						<a href="product-cart.html" class="header__shop">
 							<!-- <img src="@img/icons/shop.svg" alt="shop"> -->
 							<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M17.1558 20.25H9.89066C6.78905 20.25 4.26569 17.7267 4.26569 14.6251V8.85947C4.26569 5.9762 2.82861 3.30739 0.421544 1.72031C-0.0107343 1.43531 -0.130077 0.853876 0.154921 0.421598C0.439919 -0.0107278 1.02131 -0.130118 1.45368 0.154974C2.82776 1.06097 3.94254 2.2559 4.73969 3.63167C4.91195 3.82466 6.30104 5.29699 8.57821 5.29699H19.3738C22.3191 5.24191 24.6245 8.19769 23.8544 11.0406L22.6117 15.9939C21.9829 18.4998 19.7394 20.25 17.1558 20.25ZM5.90415 6.64234C6.06001 7.36238 6.14068 8.10483 6.14068 8.85947V14.6251C6.14068 16.6928 7.82292 18.375 9.89066 18.375H17.1558C18.8782 18.375 20.3739 17.2082 20.793 15.5376L22.0358 10.5844C22.4933 8.89509 21.1233 7.13931 19.3738 7.17198H8.57817C7.54828 7.17198 6.65185 6.94993 5.90415 6.64234ZM9.42191 22.8281C9.42191 22.1809 8.89724 21.6563 8.25004 21.6563C6.69511 21.7182 6.69647 23.9387 8.25004 24C8.89724 24 9.42191 23.4753 9.42191 22.8281ZM18.75 22.8281C18.75 22.1809 18.2253 21.6563 17.5781 21.6563C16.0232 21.7182 16.0245 23.9387 17.5781 24C18.2253 24 18.75 23.4753 18.75 22.8281ZM20.3113 9.98446C20.3113 9.46668 19.8916 9.04697 19.3738 9.04697H8.95316C7.7093 9.09647 7.71023 10.8729 8.95316 10.922H19.3738C19.8916 10.922 20.3113 10.5022 20.3113 9.98446Z" fill="#3D3D3D"></path>
@@ -109,19 +119,19 @@
 			<aside class="product-action-sticky" aria-label="Product purchase options">
 				<div class="product-action-sticky__container">
 					<div class="product-action-sticky__top">
-						<div class="product-action-sticky__quantity">
+						<div data-fls-countactions="" class="product-action-sticky__quantity">
 							<!-- <label for="qty">Qty</label> -->
 							<div class="product-action-sticky__label">Qty</div>
-							<button class="product-action-sticky__count-btn product-action-sticky__count-btn--minus" aria-label="Decrease quantity">−</button>
+							<!-- <button class="product-action-sticky__count-btn product-action-sticky__count-btn--minus" aria-label="Decrease quantity">−</button> -->
 							<!-- <input type="number" id="qty" class="qty-input" value="1" min="1" aria-label="Product quantity"> -->
-							<button class="product-action-sticky__count-btn product-action-sticky__count-btn--plus" aria-label="Increase quantity">+</button>
+							<!-- <button class="product-action-sticky__count-btn product-action-sticky__count-btn--plus" aria-label="Increase quantity">+</button> -->
 						</div>
 						<span data-product-price="" class="product-action-sticky__price">$119.00</span>
 					</div>
 					<div class="product-action-sticky__action"></div>
 				</div>
 			</aside>
-			<main class="page page--product">
+			<main class="page page--product" id="product">
 				<div class="breadcrumb__container breadcrumb">
 					<nav data-fls-breadcrumb="" class="breadcrumb__nav" aria-label="Breadcrumb">
 						<ol class="breadcrumb__list">
@@ -134,7 +144,7 @@
 						</ol>
 					</nav>
 				</div>
-				<section class="product">
+				<section data-fls-watcher="navigator" class="product">
 					<div class="product__container">
 						<div class="product__slider product-sliders">
 							<div class="product-sliders__thumbs thumbs-product-sliders">
@@ -321,16 +331,16 @@
 								</div>
 							</div>
 							<div class="content-product__actions actions-content-product">
-								<div data-fls-countactions="" class="actions-content-product__count count-actions">
-									<button type="button" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
+								<div data-fls-countactions="" data-fls-dynamic=".product-action-sticky__quantity, 767.98, 1, .product-action-sticky" class="actions-content-product__count count-actions">
+									<button type="button" data-count-minus="" class="count-actions__button count-actions__button--minus" aria-label="Decrease quantity"></button>
 									<!-- <button type="button" data-fls-dynamic="product-action-sticky__quantity, 767.98, 0, product-action-sticky" class="count-actions__button count-actions__button--minus"></button> -->
 									<!-- <div class="count-actions__quantity">1</div> -->
-									<div data-fls-dynamic=".product-action-sticky__quantity, 767.98, 2, .product-action-sticky" class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">1</div>
-									<button type="button" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
+									<div data-count-quantity="" class="count-actions__quantity" aria-label="Product quantity" contenteditable="true" role="textbox">1</div>
+									<button type="button" data-count-plus="" class="count-actions__button count-actions__button--plus" aria-label="Increase quantity"></button>
 								</div>
 								<div class="actions-content-product__buy">
-									<button type="button" data-fls-dynamic=".product-action-sticky__action, 767.98, 1, .product-action-sticky" data-fls-button="" class="actions-content-product__button button actions-content-product__button--buy">Buy now</button>
-									<button type="button" data-fls-dynamic=".product-action-sticky__action, 767.98, 2, .product-action-sticky" data-fls-button="" class="actions-content-product__button button button--second">
+									<a href="product-cart.html" data-fls-dynamic=".product-action-sticky__action, 767.98, 1, .product-action-sticky" data-fls-button="" class="actions-content-product__button button actions-content-product__button--buy">Buy now</a>
+									<button type="button" data-fls-dynamic=".product-action-sticky__action, 767.98, 2, .product-action-sticky" data-fls-button="" aria-label="Buy plant" class="actions-content-product__button button button--second">
 										<span>add to cart</span>
 										<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M18.3334 6.80137L17.3897 12.7778C17.2182 13.9563 16.2745 14.7138 15.0736 14.7138H6.83828C5.72308 14.7138 4.69367 13.8721 4.5221 12.7778L3.49269 5.79127L3.23533 3.85524C3.14955 3.35019 2.72063 3.01349 2.12014 3.01349H1.51965C1.17651 3.01349 0.833374 2.67679 0.833374 2.34009C0.833374 2.00339 1.17651 1.66669 1.51965 1.66669H2.12014C3.32112 1.66669 4.35053 2.50844 4.43632 3.68689L4.60788 5.03369H16.7893C17.2182 5.03369 17.6471 5.20204 17.9045 5.53874C18.2476 5.87544 18.3334 6.38049 18.3334 6.80137Z" fill="#D9D9D9"></path>
@@ -339,8 +349,8 @@
 										</svg>
 									</button>
 									<button type="button" class="actions-content-product__button actions-content-product__button--favorite">
-										<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M10 18.8873C9.71527 18.8873 9.44077 18.7842 9.22684 18.5968C8.41888 17.8903 7.63992 17.2264 6.95267 16.6408L6.94916 16.6377C4.93423 14.9207 3.19427 13.4378 1.98364 11.9771C0.630341 10.3441 0 8.79578 0 7.10434C0 5.46097 0.563507 3.94485 1.58661 2.83508C2.62192 1.71219 4.04251 1.09375 5.58716 1.09375C6.74164 1.09375 7.79892 1.45874 8.72955 2.1785C9.19922 2.54181 9.62494 2.98645 10 3.5051C10.3752 2.98645 10.8008 2.54181 11.2706 2.1785C12.2012 1.45874 13.2585 1.09375 14.413 1.09375C15.9575 1.09375 17.3782 1.71219 18.4135 2.83508C19.4366 3.94485 20 5.46097 20 7.10434C20 8.79578 19.3698 10.3441 18.0165 11.9769C16.8059 13.4378 15.0661 14.9205 13.0515 16.6374C12.363 17.224 11.5828 17.8889 10.773 18.5971C10.5592 18.7842 10.2846 18.8873 10 18.8873ZM5.58716 2.26532C4.37363 2.26532 3.25882 2.74963 2.44781 3.62915C1.62476 4.52194 1.17142 5.75607 1.17142 7.10434C1.17142 8.52692 1.70013 9.79919 2.88559 11.2296C4.03137 12.6122 5.73563 14.0645 7.70889 15.7462L7.71255 15.7492C8.4024 16.3371 9.18442 17.0036 9.99832 17.7153C10.8171 17.0023 11.6003 16.3347 12.2916 15.7458C14.2647 14.0642 15.9688 12.6122 17.1146 11.2296C18.2999 9.79919 18.8286 8.52692 18.8286 7.10434C18.8286 5.75607 18.3752 4.52194 17.5522 3.62915C16.7413 2.74963 15.6264 2.26532 14.413 2.26532C13.524 2.26532 12.7078 2.54791 11.9872 3.10516C11.3449 3.60199 10.8975 4.23004 10.6352 4.66949C10.5003 4.89548 10.2629 5.03036 10 5.03036C9.73709 5.03036 9.49966 4.89548 9.36478 4.66949C9.10263 4.23004 8.65524 3.60199 8.01285 3.10516C7.29218 2.54791 6.47598 2.26532 5.58716 2.26532Z" fill="#46A358"></path>
+										<svg width="20" height="20" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.5001 0.500065C10.0001 0.000118226 8.00014 2.5 8.00014 2.5C8.00014 2.5 6.00026 0.000164777 3.50015 0.500065C1.00003 0.999966 -0.499963 4.5 1.00015 7C2.50026 9.5 5.26647 11.2664 8.00014 14.0001C8.00014 14.0001 13.5001 9.5 15.0001 7C16.5001 4.5 15.0001 1.00001 12.5001 0.500065Z" stroke="black" stroke-width="1"></path>
 										</svg>
 									</button>
 								</div>

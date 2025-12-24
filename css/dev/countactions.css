@@ -102,15 +102,15 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
 }
-.count-actions__button--plus::after {
+.count-actions__button[data-count-plus]::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
-.count-actions__button--minus::after {
+.count-actions__button[data-count-minus]::after {
   content: none;
 }
-.count-actions__quantity {
-  font-size: 1.25rem;
-  max-width: 7ch;
+.count-actions [data-count-quantity] {
+  font-size: 1.0625rem;
+  max-width: 3ch;
   text-wrap: nowrap;
   overflow: hidden;
 }
@@ -134,7 +134,7 @@
   }
 }
 @media (max-width: 29.99875em) {
-  .count-actions__quantity {
+  .count-actions [data-count-quantity] {
     max-width: 3ch;
   }
 }
