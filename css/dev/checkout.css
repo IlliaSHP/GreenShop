@@ -351,13 +351,13 @@
 .item-payment-option__image img:not(:last-child) {
   margin-right: 0.25rem;
 }
-.item-payment-option__image--mobile {
+.item-payment-option__image.item-payment-option__image--mobile {
   display: flex;
 }
 .item-payment-option__text {
   margin-left: 0.625rem;
 }
-.item-payment-option__text--mobile {
+.item-payment-option__text.item-payment-option__text--mobile {
   display: block;
 }
 .popup--order [class*=__container] {
@@ -726,10 +726,10 @@
   .item-payment-option__image {
     margin-left: 0.625rem;
   }
-  .item-payment-option__image--mobile {
+  .item-payment-option__image.item-payment-option__image--mobile {
     display: none;
   }
-  .item-payment-option__text--mobile {
+  .item-payment-option__text.item-payment-option__text--mobile {
     display: none;
   }
 }
