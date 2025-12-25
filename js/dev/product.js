@@ -3,8 +3,8 @@ import "./closebtn.min.js";
 import "./productcomp.min.js";
 import "./inputform.min.js";
 import "./countactions.min.js";
+import "./scrollto.min.js";
 import "./breadcrumb.min.js";
-import "./logo.min.js";
 import "./common.min.js";
 const toggleActiveClass = (selector, activeClass = "active") => {
   document.querySelectorAll(selector).forEach((el) => {

@@ -726,6 +726,9 @@ body::after {
     text-align: right;
     align-items: flex-end;
   }
+  .menu__list:not(:has(.--navigator-active)) .menu__link--active::after {
+    bottom: 0rem;
+  }
   .icon-menu {
     display: block;
     position: relative;

@@ -330,6 +330,9 @@
     flex-wrap: wrap;
     gap: 1.25rem;
   }
+  .userpanel__accountnav {
+    flex-basis: 100%;
+  }
   .spollers__title:after {
     content: "";
   }

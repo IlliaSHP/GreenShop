@@ -3,7 +3,7 @@ import "./closebtn.min.js";
 import "./select.min.js";
 import "./productcomp.min.js";
 import "./inputform.min.js";
-import "./logo.min.js";
+import "./scrollto.min.js";
 import "./common.min.js";
 document.addEventListener("DOMContentLoaded", function() {
   const filtersButton = document.querySelector(".header__filters");

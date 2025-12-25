@@ -1,4 +1,3 @@
-import { b as bodyUnlock, g as gotoBlock, a as getHash } from "./common.min.js";
 function isObject$1(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -5426,7 +5425,7 @@ function initSliders() {
     });
   }
   if (document.querySelector(".thumbs-product-sliders__swiper")) {
-    let updateThumbsState = function() {
+    let updateThumbsState2 = function() {
       const newIsMobileView = window.innerWidth < 479.98;
       if (newIsMobileView === isMobileView) return;
       isMobileView = newIsMobileView;
@@ -5438,6 +5437,7 @@ function initSliders() {
         thumbsContainer.style.display = "flex";
       }
     };
+    var updateThumbsState = updateThumbsState2;
     const thumbsContainer = document.querySelector(".product-sliders__thumbs");
     let isMobileView = window.innerWidth < 479.98;
     const thumbsSwiper = new Swiper(".thumbs-product-sliders__swiper", {
@@ -5529,17 +5529,18 @@ function initSliders() {
       }
     });
     if ("ResizeObserver" in window) {
-      const resizeObserver = new ResizeObserver(updateThumbsState);
+      const resizeObserver = new ResizeObserver(updateThumbsState2);
       resizeObserver.observe(document.documentElement);
     } else {
-      let debounce = function(func, delay) {
+      let debounce2 = function(func, delay) {
         let timeoutId;
         return function() {
           clearTimeout(timeoutId);
           timeoutId = setTimeout(func, delay);
         };
       };
-      window.addEventListener("resize", debounce(updateThumbsState, 250));
+      var debounce = debounce2;
+      window.addEventListener("resize", debounce2(updateThumbsState2, 250));
     }
   }
   if (document.querySelector(".releted__slider")) {
@@ -5597,69 +5598,6 @@ function initSliders() {
   }
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
-function pageNavigation() {
-  document.addEventListener("click", pageNavigationAction);
-  document.addEventListener("watcherCallback", pageNavigationAction);
-  function pageNavigationAction(e) {
-    if (e.type === "click") {
-      const targetElement = e.target;
-      if (targetElement.closest("[data-fls-scrollto]")) {
-        const gotoLink = targetElement.closest("[data-fls-scrollto]");
-        const gotoLinkSelector = gotoLink.dataset.flsScrollto ? gotoLink.dataset.flsScrollto : "";
-        const noHeader = gotoLink.hasAttribute("data-fls-scrollto-header") ? true : false;
-        const gotoSpeed = gotoLink.dataset.flsScrolltoSpeed ? gotoLink.dataset.flsScrolltoSpeed : 500;
-        const offsetTop = gotoLink.dataset.flsScrolltoTop ? parseInt(gotoLink.dataset.flsScrolltoTop) : 0;
-        if (window.fullpage) {
-          const fullpageSection = document.querySelector(`${gotoLinkSelector}`).closest("[data-fls-fullpage-section]");
-          const fullpageSectionId = fullpageSection ? +fullpageSection.dataset.flsFullpageId : null;
-          if (fullpageSectionId !== null) {
-            window.fullpage.switchingSection(fullpageSectionId);
-            if (document.documentElement.hasAttribute("data-fls-menu-open")) {
-              bodyUnlock();
-              document.documentElement.removeAttribute("data-fls-menu-open");
-            }
-          }
-        } else {
-          gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
-        }
-        e.preventDefault();
-      }
-    } else if (e.type === "watcherCallback" && e.detail) {
-      const entry = e.detail.entry;
-      const targetElement = entry.target;
-      if (targetElement.dataset.flsWatcher === "navigator") {
-        document.querySelector(`[data-fls-scrollto].--navigator-active`);
-        let navigatorCurrentItem;
-        if (targetElement.id && document.querySelector(`[data-fls-scrollto="#${targetElement.id}"]`)) {
-          navigatorCurrentItem = document.querySelector(`[data-fls-scrollto="#${targetElement.id}"]`);
-        } else if (targetElement.classList.length) {
-          for (let index = 0; index < targetElement.classList.length; index++) {
-            const element = targetElement.classList[index];
-            if (document.querySelector(`[data-fls-scrollto=".${element}"]`)) {
-              navigatorCurrentItem = document.querySelector(`[data-fls-scrollto=".${element}"]`);
-              break;
-            }
-          }
-        }
-        if (entry.isIntersecting) {
-          navigatorCurrentItem ? navigatorCurrentItem.classList.add("--navigator-active") : null;
-        } else {
-          navigatorCurrentItem ? navigatorCurrentItem.classList.remove("--navigator-active") : null;
-        }
-      }
-    }
-  }
-  if (getHash()) {
-    let goToHash;
-    if (document.querySelector(`#${getHash()}`)) {
-      goToHash = `#${getHash()}`;
-    } else if (document.querySelector(`.${getHash()}`)) {
-      goToHash = `.${getHash()}`;
-    }
-    goToHash ? gotoBlock(goToHash) : null;
-  }
-}
-document.querySelector("[data-fls-scrollto]") ? window.addEventListener("load", pageNavigation) : null;
 function setupActionButtonsListeners() {
   document.addEventListener("click", (e) => {
     const addToCartBtn = e.target.closest(

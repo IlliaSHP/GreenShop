@@ -198,16 +198,17 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 addTouchAttr();
 addLoadedAttr();
 export {
-  getHash as a,
+  addLoadedAttr as a,
   bodyUnlock as b,
-  slideUp as c,
+  getHash as c,
   dataMediaQueries as d,
-  slideDown as e,
-  setHash as f,
+  slideUp as e,
+  slideDown as f,
   gotoBlock as g,
-  bodyLock as h,
-  bodyLockStatus as i,
-  bodyLockToggle as j,
+  setHash as h,
+  bodyLock as i,
+  bodyLockStatus as j,
+  bodyLockToggle as k,
   slideToggle as s,
   uniqArray as u
 };

@@ -1,4 +1,4 @@
-import { c as slideUp, s as slideToggle } from "./common.min.js";
+import { e as slideUp, s as slideToggle } from "./common.min.js";
 let formValidate = {
   getErrors(form) {
     let error = 0;
@@ -192,6 +192,9 @@ class SelectConstructor {
   }
   // Функція ініціалізації конкретного селекту
   selectInit(originalSelect, index) {
+    if (originalSelect.parentElement && originalSelect.parentElement.classList.contains("select")) {
+      return;
+    }
     index ? originalSelect.dataset.flsSelectId = index : null;
     if (originalSelect.options.length) {
       const _this = this;

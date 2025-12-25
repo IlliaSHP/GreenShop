@@ -25,6 +25,9 @@
     opacity: 1;
   }
 }
+.header .header__actions {
+  flex-grow: 0;
+}
 
 .page {
   padding-top: 7.125rem;
@@ -256,11 +259,14 @@
   }
 }
 @media (max-width: 47.99875em) {
-  .header {
-    display: none;
+  .header .header__container {
+    flex-wrap: wrap;
+  }
+  .header .header__search {
+    flex: 1 1 100%;
   }
   .page {
-    padding-top: 2.0625rem;
+    padding-top: 5rem;
   }
   .page--productcart .input-form input {
     border-top-left-radius: 2.5rem;
